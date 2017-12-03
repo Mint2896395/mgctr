@@ -1,0 +1,138 @@
+<%= link_to card2_path do %>
+  <h2 style="float: left;">Cards Special</h2>
+<% end %>
+<%= render "cards/headerspecial" %>
+<% notfirstpagex = (request.original_url.split('/').last) %>
+<% indipage = request.fullpath.split(/\W+/)[2] %>
+<% if  indipage == "page" || notfirstpagex == "card2" %>
+  <% @cards1 = @cards %>
+<% end %>
+
+<table class="table table-striped table-condensed sortable">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Person</th>
+      <th>Price</th>
+      <th>%</th>
+      <th>Date</th>
+      <th width="92" bgcolor="#5cb85c">Card01</th>
+      <th width="92" bgcolor="#5cb85c">Card02</th>
+      <th width="92" bgcolor="#499349">Card03</th>
+      <th width="92" bgcolor="#499349">Card04</th>
+      <th width="92" bgcolor="#FFD732">Card05</th>
+      <th width="92" bgcolor="#FFD732">Card06</th>
+      <th width="92" bgcolor="#E1AF0A">Card07</th>
+      <th width="92" bgcolor="#E1AF0A">Card08</th>
+      <th width="92" bgcolor="#5bc0de">Card09</th>
+      <th width="92" bgcolor="#5bc0de">Card10</th>
+      <th width="92" bgcolor="#428bca">Card11</th>
+      <th width="92" bgcolor="#428bca">Card12</th>
+      <th>Remark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @setting = Setting.first %>
+  <% @name = @setting.setting01 %>
+  <% pagenum = request.fullpath.split(/\W+/).last %>
+  <% if pagenum == "1"  %>
+  <% @cards = @cards1 %>
+  <% end %>
+    <% @cards.each_with_index do |card, index| %>
+      <tr>
+      <% if  indipage != "page" %>
+        <td class="text-center"><%= (index + 1) %></td>
+      <% else %>
+        <td class="text-center"><%= (index + 1) + ((pagenum.to_i - 1) * 20) %></td>
+      <% end %>
+        <td><%= link_to(card.person.name, card2_path(person_id: card.person)) %></td>
+        <td class="text-center"><%= number_with_precision(card.price, precision: 2)  %></td>
+        <td class="text-center"><span class="TransactionAmount"><%= number_with_precision(card.diff, precision: 2) %></span></td>
+        <td class="text-center"><%= card.date %></td>
+        <td width="92" bgcolor="#5cb85c" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card01.rjust(2, '0') %></div><img id= <%= card.card01 %> class="organon-card-front" style="position:absolute; z-index:4" src="/<%= @name %>/mycard<%=card.card01%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card01 %>"><div style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 13.5px"><%= card.date.strftime('%b%d') %></div></td>
+
+        <td width="92" bgcolor="#5cb85c" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card02.rjust(2, '0') %></div><img id= <%= card.card02 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card02%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card02 %>"></td>
+
+        <td width="92" bgcolor="#499349" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card03.rjust(2, '0') %></div><img id= <%= card.card03 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card03%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card03 %>"></td>
+
+        <td width="92" bgcolor="#499349"style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card04.rjust(2, '0') %></div><img id= <%= card.card04 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card04%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card04 %>"></td>
+
+        <td width="92" bgcolor="#FFD732" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card05.rjust(2, '0') %></div><img id= <%= card.card05 %> class="organon-card-front" style="position:absolute; z-index:4" src="/<%= @name %>/mycard<%=card.card05%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card05 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card05 %>"><div style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 13.5px"><%= (card.date + 14).strftime('%b%d') %></div></td>
+
+        <td width="92" bgcolor="#FFD732" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card06.rjust(2, '0') %></div><img id= <%= card.card06 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card06%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card06 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card06 %>"></td>
+
+        <td width="92" bgcolor="#E1AF0A" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card07.rjust(2, '0') %></div><img id= <%= card.card07 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card07%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card07 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card07 %>"></td>
+
+        <td width="92" bgcolor="#E1AF0A" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card08.rjust(2, '0') %></div><img id= <%= card.card08 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card08%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card08 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card08 %>"></td>
+
+        <td width="92" bgcolor="#5bc0de" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card09.rjust(2, '0') %></div><img id= <%= card.card09 %> class="organon-card-front" style="position:absolute; z-index:4" src="/<%= @name %>/mycard<%=card.card09%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card09 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card09 %>"><div style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 13.5px"><%= (card.date + 28).strftime('%b%d') %></div></td>
+
+        <td width="92" bgcolor="#5bc0de" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card10.rjust(2, '0') %></div><img id= <%= card.card10 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card10%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card10 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card10 %>"></td>
+
+        <td width="92" bgcolor="#428bca" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card11.rjust(2, '0') %></div><img id= <%= card.card11 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card11%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card11 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card11 %>"></td>
+
+        <td width="92" bgcolor="#428bca" style="position:relative;"><div style="position:absolute; font-size: 8.5px"><%= card.card12.rjust(2, '0') %></div><img id= <%= card.card12 %> class="organon-card-front" style="opacity: 0.75;" src="/<%= @name %>/mycard<%=card.card12%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card12 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card12 %>"></td>
+        
+        <td class="text-center"><%= card.name %></td>
+        <td><%= link_to 'S', card , class: "btn btn-outline-primary btn-sm"%></td>
+        <td><%= link_to 'E', edit_card_path(card), class: "btn btn-outline-info btn-sm", target: :_blank %></td>
+        <td><%= link_to 'X', card, class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+    <%= link_to '/8' do %>
+      <img class="cbShuffle" alt="" src="../imagesxx/button01.png" style="left:1%; top: 90.595%"; title="go to cards">
+    <% end %>
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#showhide").click(function(e) {
+      e.preventDefault();
+      $("#summary, #homeworkinput").toggle();
+      $(this).text(function(i, text) { return (text == "Show viewA") ? "Show viewB" : "Show viewA" });
+    });
+});
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+
+var els = document.getElementsByClassName('TransactionAmount');
+for (var i = 0; i < els.length; i++) {
+  var cell = els[i];
+  if (cell.textContent < 0) {
+    cell.classList.remove('green')
+  } else {
+    cell.classList.add('green');
+  }
+}
+
+$(document).ready(function(){
+  (function vendorTableSorter(){ 
+    /* paste all the vendor code here */
+  }());
+});// end document.ready
+
+
+</script>

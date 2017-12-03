@@ -1,0 +1,194 @@
+<div id="content1" class="cbContent1">
+  <div id="cards1" class="cbCards1 organon-card">
+  <%= render "tarot7/carddeck" %>
+  </div> 
+  <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
+
+      <div id="1card"><%= render "tarot1/1card" %></div> 
+    
+  </div>
+</div>
+    
+    <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return flip_1_()" >     
+    <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_1_()" >
+     <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_1_" style="top: 47%"></img>
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+        <%= render "tarot8/randommodal" %>
+        <%= render "tarot1/1randommodal" %>
+
+
+<script>
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+   
+function shuffleCards(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#cards1").load(location.href + " #cards1>*", "");
+    } 
+  });
+}
+
+function ClearCard(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#spread1").load(location.href + " #spread1>*", "");
+    } 
+  });
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+    $(ev.target).css('background-color','#d3d3d3');
+}
+
+function removeStyle(ev) {
+     $(ev.target).removeAttr('style');
+}
+
+function drag(ev) {
+    var el = ev.target;
+    var parent = el.getAttribute("data-parent");
+    
+    if(!parent){
+        el.setAttribute("data-parent", el.parentNode.id);
+    }
+    
+    ev.dataTransfer.setData("Text", el.id);
+    
+}
+
+function drop1(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback1").setAttribute('onclick', "return flip1()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+
+    document.getElementById("cardback1").style.visibility = 'visible';
+    document.getElementById("cardback1").setAttribute('id', abc.id);
+    $('.card1').toggleClass('flipped');
+}
+
+function drop2(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback2").setAttribute('onclick', "return flip2()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback2").style.visibility = 'visible';
+    document.getElementById("cardback2").setAttribute('id', abc.id);
+    $('.card2').toggleClass('flipped');
+}
+
+function drop3(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback3").setAttribute('onclick', "return flip3()");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback3").style.visibility = 'visible';
+    document.getElementById("cardback3").setAttribute('id', abc.id);
+    $('.card3').toggleClass('flipped');
+}
+
+function dragEnd(ev){
+    if(ev.dataTransfer.dropEffect == "none"){
+         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
+        
+        parent.appendChild(ev.target);
+        
+    }
+}
+
+function flip() {
+    $('.card1').toggleClass('flipped');
+    $('.card2').toggleClass('flipped');
+    $('.card3').toggleClass('flipped');
+}
+function flip1() {
+    $('.card1').toggleClass('flipped');
+}
+function flip2() {
+    $('.card2').toggleClass('flipped');
+}
+function flip3() {
+    $('.card3').toggleClass('flipped');
+}
+
+$('.f').hover(makeBigger, returnToOriginalSize);
+
+function makeBigger() {
+    $(this).css({height: '+=60%', width: '+=30%'});
+}
+function returnToOriginalSize() {
+    $(this).css({height: "", width: ""});
+}
+
+function handleDragStart(e) {
+    var dragIcon = document.createElement('img');
+    dragIcon.src = '../<%= @name %>/CardBack.jpg';
+    var div = document.getElementsByClassName('mgCard organon-card-front');
+    e.dataTransfer.setDragImage(dragIcon, 150, 350);
+}
+
+this.addEventListener('dragstart', handleDragStart, false);
+
+
+</script>
+

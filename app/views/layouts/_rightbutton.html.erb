@@ -1,0 +1,27 @@
+<a href="#" onclick="return false;" id="fullscreen" class="cbShuffle exp" alt="" style="top:57%;"><i class="fa fa-expand"  style="color:#474747;" aria-hidden="true"></i></a>
+
+<a href="#" onclick="return false;" id="deckhide" class="cbShuffle exp" alt="" style="top:65%;"><i class="fa fa-eject" style="color:#474747;" aria-hidden="true"></i></a>
+
+<a onclick="return changecssstyle();" id="miniscreen" class="cbShuffle exp" alt="" style="top:73%;"><i class="fa fa-desktop" style="color:#474747;" aria-hidden="true"></i></a>
+
+<script>
+  var fileName = location.pathname.split("/").slice(-1)
+  $(document).ready(function() {
+    if(fileName == "tarot" 
+        || fileName == "1" 
+        || fileName == "2" 
+        || fileName == "3"
+        || fileName == "4"
+        || fileName == "5" 
+        || fileName == "6" 
+        || fileName == "7"
+        || fileName == "8"
+        ){
+        $("#deckhide").show();
+        $("#miniscreen").show();
+    } else {
+        $("#deckhide").hide();
+        $("#miniscreen").hide();
+    }
+});
+</script>

@@ -1,0 +1,41 @@
+<% @setting = Setting.first %> 
+<% if @setting.setting04 == nil %> 
+<% @selectedname = Person.last.id %>  
+<% else %>  
+<% @selectedname = @setting.setting04 %> 
+<% end %>
+<% @card = Card.new %> 
+<%= simple_form_for @card, url: {controller: "cards", action: "create"} do |f| %>
+<br>
+  <%= f.association :person, label: false, selected: @selectedname, input_html: { id: 'selectized_8_'} %>
+    <div class= "row">
+      <div class= "col-sm-6">
+      <%= f.input :price, label: false, placeholder: "Price" %>
+      </div>
+      <div class= "col-sm-6">
+        <%= f.input :diff, label: false, placeholder: "%diff" %>
+      </div>
+    </div>
+  <%= f.input :date, label: false %>
+  <%= f.input :name, label: false, placeholder: "Remark" %>
+  <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
+  </div>
+<br>
+  <div class="band3">
+      <%= f.input :card01, :input_html => { :id => 'cardf_8_01' } %>
+      <%= f.input :card02, :input_html => { :id => 'cardf_8_02' } %>
+      <%= f.input :card03, :input_html => { :id => 'cardf_8_03' } %>
+      <%= f.input :card04, :input_html => { :id => 'cardf_8_04' } %>
+      <%= f.input :card05, :input_html => { :id => 'cardf_8_05' } %>
+      <%= f.input :card06, :input_html => { :id => 'cardf_8_06' } %>
+      <%= f.input :card07, :input_html => { :id => 'cardf_8_07' } %>
+      <%= f.input :card08, :input_html => { :id => 'cardf_8_08' } %>
+      <%= f.input :card09, :input_html => { :id => 'cardf_8_09' } %>
+      <%= f.input :card10, :input_html => { :id => 'cardf_8_10' } %>
+      <%= f.input :card11, :input_html => { :id => 'cardf_8_11' } %>
+      <%= f.input :card12, :input_html => { :id => 'cardf_8_12' } %>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,275 @@
+<!--
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+  <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px"><%= card.date.strftime('%b%d') %>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" >
+      <%= number_with_precision(card.price, precision: 2) %>
+    </span>
+  </span>
+
+  <img id= <%= card.card01 %> class="organon-card-front" style="magin-right:10px; z-index:4" src="/<%= @name %>/mycard<%=card.card01%>.jpg" alt="" border="1" height="140.8" width="78" onclick= "compare(<%= card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card01 %>">
+    </tr>
+    <tr><span> </span></tr>
+  <% end %>
+</table> 
+
+<table>
+  <% @cards.each do |card| %>
+    <tr>
+      <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"><%= number_with_precision(card.diff, precision: 2) %></span>
+
+      <img id= <%= card.card02 %> class="organon-card-front" style="magin-right:10px; z-index:4" src="/<%= @name %>/mycard<%=card.card02%>.jpg" alt="" border="1" height="140.8" width="78" onclick= "compare(<%= card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card02 %>">
+    </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+
+
+<table>
+  <% @cards.each do |card| %>
+    <tr>
+      <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px">
+        <%= (card.date + 14).strftime('%b%d') %>
+      </span>
+
+      <img id= <%= card.card05 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" src="/<%= @name %>/mycard<%=card.card05%>.jpg" alt="" border="1" height="140.8" width="78" onclick= "compare(<%= card.card05 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card05 %>">
+    </tr>
+    <tr><span> </span></tr>
+  <% end %>
+</table> 
+
+
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+  <img id= <%= card.card06 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" src="/<%= @name %>/mycard<%=card.card06%>.jpg" alt="" border="1" height="140.8" width="78" onclick= "compare(<%= card.card06 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card06 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+-->
+
+
+<table>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"><%= link_to("(1)", card2_path(person_id: 1)) %></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("IEC (2)", card2_path(person_id: 2)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("ARIP (3)", card2_path(person_id: 3)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("AOT (4)", card2_path(person_id: 4)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("PDI (5)", card2_path(person_id: 5)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("WHA (6)", card2_path(person_id: 6)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("CPALL (7)", card2_path(person_id: 7)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("APEX (8)", card2_path(person_id: 8)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("TAKUNI (9)", card2_path(person_id: 9)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("EARTH (10)", card2_path(person_id: 10)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to("GLOBAL (11)", card2_path(person_id: 11)) %> 
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("WAVE (12)", card2_path(person_id: 12)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("BTS (13)", card2_path(person_id: 13)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("GL (14)", card2_path(person_id: 14)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("POLAR (15)", card2_path(person_id: 15)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("TTA (16)", card2_path(person_id: 16)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("STA (17)", card2_path(person_id: 17)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("TRUBB (18)", card2_path(person_id: 18)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("HTECH (19)", card2_path(person_id: 19)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+       <%= link_to("BANPU (20)", card2_path(person_id: 20)) %>
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"></span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+</table>

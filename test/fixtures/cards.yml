@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  price: 9.99
+  diff: 9.99
+  date: 2017-11-03
+  card01: MyString
+  card02: MyString
+  card03: MyString
+  card04: MyString
+  card05: MyString
+  card06: MyString
+  card07: MyString
+  card08: MyString
+  card09: MyString
+  card10: MyString
+  card11: MyString
+  card12: MyString
+  person: one
+
+two:
+  name: MyString
+  price: 9.99
+  diff: 9.99
+  date: 2017-11-03
+  card01: MyString
+  card02: MyString
+  card03: MyString
+  card04: MyString
+  card05: MyString
+  card06: MyString
+  card07: MyString
+  card08: MyString
+  card09: MyString
+  card10: MyString
+  card11: MyString
+  card12: MyString
+  person: two

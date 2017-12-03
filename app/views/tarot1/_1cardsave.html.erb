@@ -1,0 +1,27 @@
+<% @setting = Setting.first %> <% @selectedname = @setting.setting03 %>  <% @card = Card.new %> 
+<%= simple_form_for @card, :remote => true, url: {controller: "cards", action: "create"} do |f| %>
+  <%= f.association :person, selected: @selectedname,input_html: { id: 'selectized_1_'} %>
+  <%= f.input :name %>
+  <%= f.input :date %>
+  <div class="form-actions">
+      <%= f.submit data: {confirm: 'Do you want to Save Cards?', commit: 'Save!'} %>
+  </div>
+
+  <div class="band3">
+      <%= f.input :card01, :input_html => { :id => 'cardf_1_01' } %>
+      <%= f.input :card02, :input_html => { :id => 'cardf_1_02' } %>
+      <%= f.input :card03, :input_html => { :id => 'cardf_1_03' } %>
+      <%= f.input :card04, :input_html => { :id => 'cardf_1_04' } %>
+      <%= f.input :card05, :input_html => { :id => 'cardf_1_05' } %>
+      <%= f.input :card06, :input_html => { :id => 'cardf_1_06' } %>
+      <%= f.input :card07, :input_html => { :id => 'cardf_1_07' } %>
+      <%= f.input :card08, :input_html => { :id => 'cardf_1_08' } %>
+      <%= f.input :card09, :input_html => { :id => 'cardf_1_09' } %>
+      <%= f.input :card10, :input_html => { :id => 'cardf_1_10' } %>
+      <%= f.input :card11, :input_html => { :id => 'cardf_1_11' } %>
+      <%= f.input :card12, :input_html => { :id => 'cardf_1_12' } %>
+  </div>
+<% end %>
+
+
+

@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+<%= link_to cards_path do %>
+  <h1 style="float: left;">Cards</h1>
+<% end %>
+<div id="wrapper1" style="text-align: center;">    
+    <div style="display: inline-block;"><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
+</div>
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Person</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Card01</th>
+      <th>Card02</th>
+      <th>Card03</th>
+      <th>Card04</th>
+      <th>Card05</th>
+      <th>Card06</th>
+      <th>Card07</th>
+      <th>Card08</th>
+      <th>Card09</th>
+      <th>Card10</th>
+      <th>Card11</th>
+      <th>Card12</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @setting = Setting.first %>
+  <% @name = @setting.setting01 %>
+    <% @cards.each do |card| %>
+      <tr>
+        <td class="text-center"><%= card.id %></td>
+        <td><%= link_to(card.person.name, cards_path(person_id: card.person)) %></td>
+        <td class="text-center"><%= card.name %></td>
+        <td class="text-center"><%= card.date %></td>
+        <td><img id= <%= card.card01 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card01%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card01 %>"></td>
+
+        <td><img id= <%= card.card02 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card02%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card02 %>"></td>
+
+        <td><img id= <%= card.card03 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card03%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card03 %>"></td>
+
+        <td><img id= <%= card.card04 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card04%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card04 %>"></td>
+
+        <td><img id= <%= card.card05 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card05%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card05 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card05 %>"></td>
+
+        <td><img id= <%= card.card06 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card06%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card06 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card06 %>"></td>
+
+        <td><img id= <%= card.card07 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card07%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card07 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card07 %>"></td>
+
+        <td><img id= <%= card.card08 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card08%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card08 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card08 %>"></td>
+
+        <td><img id= <%= card.card09 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card09%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card09 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card09 %>"></td>
+
+        <td><img id= <%= card.card10 %> class="organon-card-front" src="/<%= @name %>/mycard<%=card.card10%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card10 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card10 %>"></td>
+
+        <td><img id= <%= card.card11 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card11%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card11 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card11 %>"></td>
+
+        <td><img id= <%= card.card12 %> class="organon-card-front" style="opacity: 0.7;" src="/<%= @name %>/mycard<%=card.card12%>.jpg" alt="" border="1" height="160" width="90" onclick= "compare(<%= card.card12 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card12 %>"></td>
+        
+        <td><%= link_to 'S', card , class: "btn btn-outline-primary btn-sm"%></td>
+        <td><%= link_to 'E', edit_card_path(card), class: "btn btn-outline-info btn-sm" %></td>
+        <td><%= link_to 'X', card, class: "btn btn-outline-danger btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#showhide").click(function(e) {
+      e.preventDefault();
+      $("#summary, #homeworkinput").toggle();
+      $(this).text(function(i, text) { return (text == "Show viewA") ? "Show viewB" : "Show viewA" });
+    });
+});
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+
+var els = document.getElementsByClassName('TransactionAmount');
+for (var i = 0; i < els.length; i++) {
+  var cell = els[i];
+  if (cell.textContent < 0) {
+    cell.classList.remove('green')
+  } else {
+    cell.classList.add('green');
+  }
+}
+
+</script>

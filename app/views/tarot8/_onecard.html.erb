@@ -1,0 +1,646 @@
+<div id="contentonecard_8_" class="container-fluid" style="visibility:hidden;">
+<div id="dropzone" class='show' ondrop="dropone_8_01(event)" ondragover="allowDrop1(event)" ondragleave="removeStyle(event)">
+</div>
+                <div class="row">
+                    <div class="col-lg-12">        
+      <table class="cb3spread cbFont2" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr class="tr1">
+            <td id="cardcount_8_" colspan="3" style="text-align:center;">Please choose 12 Tarot cards...</td>
+          </tr>
+            <tr class="tr9">
+            <td class="td33"></td>
+            <td class="td33">
+              <div class="cbCrd0">
+                <div class="flip">
+                  <div class="cardone_8_"> 
+                    <div class="face front"> 
+                      <div class="inner"> 
+                        <div id="cardonefront_8_01" class="cbCrd1 f" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="dropone_8_01(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)"> 
+                        <img id="cardoneback_8_2" class="cbCrd1" style="border-radius: 5px; text-align:center; visibility: hidden; " src="./<%= @name %>/CardBack.jpg">
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="face back"> 
+                      <div class="inner text-center">
+                        <img id="cardoneback_8_1" class="cbCrd1" style="border-radius: 5px; text-align:center; visibility: hidden; " src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="dropone_8_01(event)" ondragover="allowDrop1(event)" ondragleave="removeStyle(event)">
+                      </div>
+                    </div>
+                  </div>	 
+                </div>
+              </div>
+            </td>
+            <td class="td33">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+                    </div>
+                </div>
+            </div>
+
+<script>
+
+function allowDrop1(ev) {
+  ev.preventDefault();
+    $(ev.target).css('opacity','0.2');
+}
+
+function removeStyle1(ev) {
+     $(ev.target).css('opacity','0.05');
+}
+
+var i_8_ = 1;
+  function dropone_8_01(ev) {
+      document.getElementById("cardoneback_8_1").style.visibility = 'visible';
+      document.getElementById("cardoneback_8_2").style.visibility = 'visible';
+      $(ev.target).css('opacity','0.05');
+      change_8_()
+      if (i_8_ == 1) {
+      i_8_ = i_8_ + 1; 
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_1").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_01(ev);
+      
+      }
+      else if (i_8_ == 2) {
+      i_8_ = i_8_ + 1;       
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_2").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_02(ev);
+      
+      }
+      else if (i_8_ == 3) {
+      i_8_ = i_8_ + 1;       
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_3").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_03(ev);
+      
+      }
+      else if (i_8_ == 4) {
+      i_8_ = i_8_ + 1;       
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_4").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_04(ev);
+      
+      }
+      else if (i_8_ == 5) {
+      i_8_ = i_8_ + 1;       
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_5").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_05(ev);
+      
+      }
+      else if (i_8_ == 6) {
+      i_8_ = i_8_ + 1;       
+      $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_6").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_06(ev);
+      
+      }
+      else if (i_8_ == 7) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_7").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_07(ev);
+      
+      }
+      else if (i_8_ == 8) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_8").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_08(ev);
+      
+      }
+      else if (i_8_ == 9) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_9").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_09(ev);
+      
+      }
+      else if (i_8_ == 10) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_10").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_10(ev);
+      
+      }
+      else if (i_8_ == 11) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_11").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_11(ev);
+      
+      }
+      else if (i_8_ == 12) {
+      i_8_ = i_8_ + 1;       $('.cardone_8_').toggleClass('flipped');
+      document.getElementById("cardimage_8_x_12").style.visibility = 'visible';
+      document.getElementById("cardcount_8_").innerHTML = i_8_ - 1;
+      drop_8_x_12(ev);
+      
+      }
+  }
+
+function change_8_()
+{
+    $('#cardcount_8_').fadeOut(500, function(){
+      $("#cardcount_8_").css('height', '0px');
+      $("#cardcount_8_").text(i_8_-1).show().animate({height: '10px'}, "600");
+    });
+     
+    //$("#click").slideDown(5000);
+	
+}
+
+function dragEnter(e){
+  if (e.stopPropagation) e.stopPropagation();
+  this.className = this.className + " dropover";
+}
+
+function dragLeave(e){
+  if (e.stopPropagation) e.stopPropagation();
+  this.className = this.className.replace('dropover','');
+}
+
+function dragOver(e){
+  if (e.stopPropagation) e.stopPropagation();
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'copy';
+  return false; 
+}
+
+function init(){
+  
+  var boxes = document.querySelectorAll('.box'),
+      dropZone = document.getElementById('dropzone');
+  
+  for( var i=0,len=boxes.length; i<len; i++ ){
+    boxes[i].addEventListener('dragstart', dragStart, false);
+    boxes[i].addEventListener('dragend', dragEnd, false);
+  }
+  
+  dropZone.addEventListener('dragenter', dragEnter, false);
+  dropZone.addEventListener('dragleave', dragLeave, false);
+  dropZone.addEventListener('dragover', dragOver, false);
+  dropZone.addEventListener('drop', drop, false);
+}
+
+init();
+
+
+function drop(e){
+  if (e.stopPropagation) e.stopPropagation();
+  var removeEl = e.dataTransfer.getData('text'),
+      boxes = document.getElementsByClassName('box'),
+      dropZone = document.getElementById('dropzone');
+  
+  for( var i=0; i<boxes.length; i++ ){
+    
+    if( boxes[i].text == removeEl ){
+      boxes[i].parentNode.removeChild(boxes[i]);
+     
+      if( boxes.length <= 0 ){
+        
+        var a = document.createElement('a'),
+            h3 = document.createElement('h3'),
+            boxWrapper = document.getElementsByClassName('drop-boxes');
+        h3.innerHTML = "Hooray! You removed all the boxes.";
+        a.setAttribute('href','#');
+        a.setAttribute('id','restartLink');
+        a.addEventListener('click',restartLink,false);
+        
+        a.className = 'show';
+        a.innerHTML = 'Click me to restart.';
+        
+        boxWrapper[0].appendChild(h3);
+        boxWrapper[0].appendChild(a);
+        dropZone.className = 'hide';
+      }
+    }
+  }
+  
+  this.className = this.className.replace('dropover','');
+  return false;
+}
+
+
+function drop_8_x_01(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_1").setAttribute('onclick', "return flip_8_1()");
+    document.getElementById("carddrop_8_01").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_1").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_1").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_1").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_1").style.visibility = 'visible';
+    document.getElementById("cardback_8_1").setAttribute('id', abc.id);
+    $('.card_8_1').toggleClass('flipped');
+
+    document.getElementById("cardf_8_01").value = abc.id;
+    document.getElementById("cardimage_8_1").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_1").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_1").style.visibility = 'visible';
+    
+}
+
+function drop_8_x_02(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_2").setAttribute('onclick', "return flip_8_2()");
+    document.getElementById("carddrop_8_02").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_2").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_2").setAttribute('data-card-id', abc.id);
+    
+
+    document.getElementById("cardimage_8_x_2").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_2").style.visibility = 'visible';
+    document.getElementById("cardback_8_2").setAttribute('id', abc.id);
+    $('.card_8_2').toggleClass('flipped');
+
+    document.getElementById("cardf_8_02").value = abc.id;
+    document.getElementById("cardimage_8_2").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_2").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_2").style.visibility = 'visible';
+    
+}
+
+function drop_8_x_03(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_3").setAttribute('onclick', "return flip_8_3()");
+    document.getElementById("carddrop_8_03").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_3").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_3").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_3").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_3").style.visibility = 'visible';
+    document.getElementById("cardback_8_3").setAttribute('id', abc.id);
+    $('.card_8_3').toggleClass('flipped');
+
+    document.getElementById("cardf_8_03").value = abc.id;
+    document.getElementById("cardimage_8_3").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_3").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_3").style.visibility = 'visible';
+    
+}
+
+function drop_8_x_04(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_4").setAttribute('onclick', "return flip_8_4()");
+    document.getElementById("carddrop_8_04").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_4").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_4").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_4").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_4").style.visibility = 'visible';
+    document.getElementById("cardback_8_4").setAttribute('id', abc.id);
+    $('.card_8_4').toggleClass('flipped');
+
+    document.getElementById("cardf_8_04").value = abc.id;
+    document.getElementById("cardimage_8_4").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_4").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_4").style.visibility = 'visible';
+}
+    
+function drop_8_x_05(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_5").setAttribute('onclick', "return flip_8_5()");
+    document.getElementById("carddrop_8_05").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_5").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_5").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_5").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_5").style.visibility = 'visible';
+    document.getElementById("cardback_8_5").setAttribute('id', abc.id);
+    $('.card_8_5').toggleClass('flipped');
+
+    document.getElementById("cardf_8_05").value = abc.id;
+    document.getElementById("cardimage_8_5").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_5").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_5").style.visibility = 'visible';
+
+}
+function drop_8_x_06(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_6").setAttribute('onclick', "return flip_8_6()");
+    document.getElementById("carddrop_8_06").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_6").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_6").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_6").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_6").style.visibility = 'visible';
+    document.getElementById("cardback_8_6").setAttribute('id', abc.id);
+    $('.card_8_6').toggleClass('flipped');
+
+    document.getElementById("cardf_8_06").value = abc.id;
+    document.getElementById("cardimage_8_6").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_6").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_6").style.visibility = 'visible';
+
+}
+function drop_8_x_07(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_7").setAttribute('onclick', "return flip_8_7()");
+    document.getElementById("carddrop_8_07").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardimage_8_x_7").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_7").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_7").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_7").style.visibility = 'visible';
+    document.getElementById("cardback_8_7").setAttribute('id', abc.id);
+    $('.card_8_7').toggleClass('flipped');
+
+    document.getElementById("cardf_8_07").value = abc.id;
+    document.getElementById("cardimage_8_7").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_7").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_7").style.visibility = 'visible';
+}
+
+function drop_8_x_08(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_8").setAttribute('onclick', "return flip_8_8()");
+    document.getElementById("carddrop_8_08").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_8").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_8").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_8").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_8").style.visibility = 'visible';
+    document.getElementById("cardback_8_8").setAttribute('id', abc.id);
+    $('.card_8_8').toggleClass('flipped');
+
+    document.getElementById("cardf_8_08").value = abc.id;
+    document.getElementById("cardimage_8_8").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_8").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_8").style.visibility = 'visible';
+}
+
+function drop_8_x_09(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_9").setAttribute('onclick', "return flip_8_9()");
+    document.getElementById("carddrop_8_09").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_9").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_9").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_9").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_9").style.visibility = 'visible';
+    document.getElementById("cardback_8_9").setAttribute('id', abc.id);
+    $('.card_8_9').toggleClass('flipped');
+
+    document.getElementById("cardf_8_09").value = abc.id;
+    document.getElementById("cardimage_8_9").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_9").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_9").style.visibility = 'visible';
+
+}
+
+function drop_8_x_10(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_10").setAttribute('onclick', "return flip_8_10()");
+    document.getElementById("carddrop_8_10").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_10").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_10").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_10").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_10").style.visibility = 'visible';
+    document.getElementById("cardback_8_10").setAttribute('id', abc.id);
+    $('.card_8_10').toggleClass('flipped');
+
+    document.getElementById("cardf_8_10").value = abc.id;
+    document.getElementById("cardimage_8_10").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_10").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_10").style.visibility = 'visible';
+
+}
+function drop_8_x_11(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_11").setAttribute('onclick', "return flip_8_11()");
+    document.getElementById("carddrop_8_11").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardimage_8_x_11").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_11").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_11").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_11").style.visibility = 'visible';
+    document.getElementById("cardback_8_11").setAttribute('id', abc.id);
+    $('.card_8_11').toggleClass('flipped');
+
+    document.getElementById("cardf_8_11").value = abc.id;
+    document.getElementById("cardimage_8_11").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_11").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_11").style.visibility = 'visible';
+}
+function drop_8_x_12(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "0%";
+    document.getElementById(data).style.width = "0%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_8_12").setAttribute('onclick', "return flip_8_12()");
+    document.getElementById("carddrop_8_12").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+    document.getElementById("cardimage_8_x_12").setAttribute('onclick', "compare(" + abc.id + ")" );
+    document.getElementById("cardimage_8_x_12").setAttribute('data-card-id', abc.id);
+
+    document.getElementById("cardimage_8_x_12").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_12").style.visibility = 'visible';
+    document.getElementById("cardback_8_12").setAttribute('id', abc.id);
+    $('.card_8_12').toggleClass('flipped');
+
+    document.getElementById("cardf_8_12").value = abc.id;
+    document.getElementById("cardimage_8_12").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_8_12").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_8_12").style.visibility = 'visible';
+
+  setTimeout(function(){
+    beforeflip_8_()
+    setTimeout(function(){
+      document.getElementById('deckhide').click();
+      
+      changecssstyle() 
+      setTimeout(function(){
+        $("#wrapper_8_").toggleClass("toggled");
+      }, 3000); 
+    }, 3000); 
+  }, 1000); 
+  
+
+}
+
+</script>

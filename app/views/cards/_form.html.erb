@@ -1,0 +1,37 @@
+<div class= "row">
+    <div class= "col-sm-3" style="top: 5px; padding-left: 70px; padding-right: 20px;">  
+        <%= simple_form_for(@card) do |f| %>
+
+          <div class="form-inputs">
+            <%= f.association :person %>
+            <%= f.input :name , as: :text %>
+            <div class= "row">
+                <div class= "col-sm-6">
+            <%= f.input :price %>
+            </div>
+                <div class= "col-sm-6">
+            <%= f.input :diff %>
+            </div>
+              </div>
+              <%= f.input :date %>
+              <div class="band">
+                <%= f.input :card01 %>
+                <%= f.input :card02 %>
+                <%= f.input :card03 %>
+                <%= f.input :card04 %>
+                <%= f.input :card05 %>
+                <%= f.input :card06 %>
+                <%= f.input :card07 %>
+                <%= f.input :card08 %>
+                <%= f.input :card09 %>
+                <%= f.input :card10 %>
+                <%= f.input :card11 %>
+                <%= f.input :card12 %>
+              </div>
+          <div class="form-actions">
+            <%= f.button :submit %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,627 @@
+/* RGB */
+
+$color1: rgb(143, 149, 146);
+$color2: rgba(205, 255, 220, 1);
+$color3: rgba(192, 243, 219, 1);
+$color4: rgb(7, 8, 8);
+$color5: rgb(11, 11, 10);
+
+/*
+*= require_self
+*=require bootstrap
+*/
+/*
+ *= require rails_bootstrap_forms
+ */
+ /*
+ *=require jquery.ui
+ *= require jquery-ui/mouse
+ *= require jquery-ui/draggable
+ *= require jquery-ui/droppable
+ *= require jquery.ui.touch-punch
+ *= require bower_components/jqueryui-touch-punch/jquery.ui.touch-punch
+ */
+ 
+
+@import "bootstrap";
+@import "home";
+@import "tarot";
+@import "tarot1";
+@import "tarot2";
+@import "tarot4";
+@import "tarot5";
+@import "tarot6";
+@import "tarot7";
+@import "tarot8";
+@import "style";
+@import "cards";
+@import "custom-confirm";
+
+html body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  background: black;
+  color: $ivory;
+}
+
+html body .container-fluid.body-content {
+  position: absolute;
+  top: 50px;
+  bottom: 40px;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: $color1;
+  height: 50px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(40, 40, 40, .8);
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff77;
+  display: inline-block;
+  padding: .15rem;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-size: 1vw;
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.parrent {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.child {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.TransactionAmount {
+  color: #FF0000;
+}
+
+.TransactionAmount.green {
+  color: #33FF3C;
+}
+
+.modal-content {
+  color: $cafe-noir;
+}
+
+.modal-dialog {
+  max-width: 40% !important;
+  margin: 0 auto;
+  top: 10%;
+  /*add what you want here*/
+}
+
+a {
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  //border: 1px solid red;
+  
+}
+
+.card-all {
+  min-height: 100px; 
+  max-width: 30vw;
+  max-height: 30vh;
+}
+
+.card-all:hover {
+  opacity: 0.3;
+}
+
+.card-block {
+  min-height: 100px; // width: 100%;
+  bottom: 0px;
+}
+
+/* item styles */
+
+.bootCols {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid auto;
+}
+
+.card-img-icon {
+  display: block;
+  overflow: hidden;
+  max-height: 15.8vw;
+  object-fit: cover;
+  padding: 0px;
+  margin: auto;
+  backface-visibility: hidden;
+}
+
+.bg-semitransparent {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+
+.card-img-top {
+  overflow: hidden; 
+  max-height: 26.8em;
+  max-width: 20.8em;
+  //object-fit: cover;
+  padding: 0px;
+}
+
+.card-img-top img {
+  //position: absolute;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto; //object-fit: cover;
+  /* to make the image responsive */
+  max-width: 100%;
+  width: auto;
+  height: auto !important;
+}
+
+
+
+.band1 {
+  width: 100%;
+  max-width: 1025px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+
+.band2 {
+  width: 100%;
+  max-width: 1625px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 12px;
+}
+
+.band2x {
+  width: 100%;
+  max-width: 1625px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 12px;
+}
+
+.band3 {
+  width: 100%;
+  max-width: 1025px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+}
+
+@media only screen and (min-width: 100px) {
+    .band1 {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+  .band {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+  }
+    .band1 {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px;
+    }
+
+    .card-img-top {
+      overflow: hidden;
+      max-height: 26.8em;
+      max-width: 20.0em; 
+      //object-fit: cover;
+      padding: 0px;
+    }
+
+    .card-img-top img {
+      //position: absolute;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto; //object-fit: cover;
+      /* to make the image responsive */
+      max-width: 100%;
+      width: auto;
+      height: auto !important;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+  .band {
+    width: 100%;
+    max-width: 1025px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 18px;
+  }
+  .band1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  
+}
+
+.card {
+  //background: white;
+  background: #1c1d1c6e;
+  border: 1px solid $color4;
+  text-decoration: none;
+  color: #818080;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // display: flex;
+  // flex-direction: column;
+  //min-height: 100%;
+  position: relative; // top: 0;
+  // transition: all .1s ease-in;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.card:hover{
+  opacity: 1.0;
+}
+
+.card article {
+  padding: 20px;
+}
+
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card span {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+/* typography */
+
+.card h4 {
+  font-size: 1.25em;
+  margin: 0;
+  color: #818080;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+
+.card text {
+  font-size: 100%;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 2em 0 0 0;
+  vertical-align: baseline;
+  word-wrap: break-word;
+}
+
+.modal-lg {
+  max-width: 60% !important;
+}
+
+.cardImage{
+  max-height: 550px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.cardImage1{
+  max-height: 250px;
+  width: 150px;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.cardImage2 {
+  max-height: 43vh;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.modal.custom .modal-dialog {
+  max-width: 90% !important;
+  margin: 0 auto;
+  top: 15%;
+  /*add what you want here*/
+}
+
+.modal.custom .modal-header,
+.modal.custom .modal-body,
+.modal.custom .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.modal.custom1 .modal-dialog {
+  max-width: 90% !important;
+  margin: 0 auto;
+  top: 0%;
+  /*add what you want here*/
+}
+
+.modal.custom1 .modal-header,
+.modal.custom1 .modal-body,
+.modal.custom1 .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.modal.custom2 .modal-dialog {
+  max-width: 90% !important;
+  margin: 0 auto;
+  top: 5%;
+  /*add what you want here*/
+}
+
+.modal.custom2 .modal-header,
+.modal.custom2 .modal-body,
+.modal.custom2 .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.modal-content1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: rgba(58, 58, 55, 0.486);
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  outline: 0;
+  padding: 35px;
+  max-height: 1024px;
+}
+
+tr td {
+  padding: 0.2rem !important;
+  margin: 0 !important;
+}
+
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (https://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+/* Toggle Styles */
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  //z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 90%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+  height: 100%;
+  overflow-y: auto;
+  
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0px;
+  }
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+#toggleSidebar {
+  float: left;
+  color: #779DD7;
+  padding: 2px 4px;
+}
+
+
+#container {
+  display: block;
+  width: 100%;
+  height: 700px;
+  //top: -100px;
+  //left: -200px;
+  //background: #ccc;
+}
+
+.latestblock {
+  width: 150px;
+  //height: 350px;
+  //min-width: 50px;
+  min-height: 50px;
+  //background: #e00;
+  position: absolute;
+}
+
+.text-container img {
+  float: left;
+  margin: 0 0 10px 10px;
+}

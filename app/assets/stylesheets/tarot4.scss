@@ -1,0 +1,687 @@
+.flip .card_4_1.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_1 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_1 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_1 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_1 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_1 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+//////
+.flip .card_4_2.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_2 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_2 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_2 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_2 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_3.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_3 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_3 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_3 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_3 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_3 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_4.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_4 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_4 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_4 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_4 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_4 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_5.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_5 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_5 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_5 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_5 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_5 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_6.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_6 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_6 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_6 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_6 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_6 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_7.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_7 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_7 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_7 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_7 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_7 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_8.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_8 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_8 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_8 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_8 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_8 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_9.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_9 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_9 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_9 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_9 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_9 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_10.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_10 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_10 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_10 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_10 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_10 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_11.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_11 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_11 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_11 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_11 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_11 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_4_12.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_4_12 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_4_12 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_4_12 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_4_12 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_4_12 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+
+/* Toggle Styles */
+
+#wrapper_4_ {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+
+#wrapper_4_.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  //z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 90%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper_4_.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#wrapper_4_.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper_4_ {
+    padding-left: 0px;
+  }
+  #wrapper_4_.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0px;
+  }
+  #wrapper_4_.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper_4_.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+#toggleSidebar {
+  float: left;
+  color: #779DD7;
+  padding: 2px 4px;
+}
+
+#container_4_ {
+  display: block;
+  width: 100%;
+  height: 700px; //top: -100px;
+  //left: -200px;
+  //background: #ccc;
+}
+
+.latestblock_4_ {
+  width: 150px; //height: 350px;
+  //min-width: 50px;
+  min-height: 50px; //background: #e00;
+  position: absolute;
+}

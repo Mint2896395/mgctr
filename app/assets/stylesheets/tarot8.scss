@@ -1,0 +1,1379 @@
+.flip .card_8_1.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_1 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_1 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_1 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_1 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_1 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+//////
+.flip .card_8_2.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_2 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_2 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_2 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_2 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_3.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_3 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_3 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_3 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_3 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_3 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_4.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_4 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_4 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_4 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_4 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_4 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_5.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_5 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_5 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_5 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_5 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_5 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_6.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_6 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_6 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_6 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_6 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_6 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_7.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_7 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_7 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_7 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_7 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_7 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_8.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_8 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_8 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_8 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_8 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_8 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_9.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_9 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_9 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_9 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_9 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_9 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_10.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_10 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_10 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_10 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_10 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_10 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_11.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_11 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_11 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_11 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_11 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_11 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_8_12.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_8_12 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_8_12 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_8_12 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_8_12 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_8_12 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+
+/* Toggle Styles */
+
+#wrapper_8_ {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+
+#wrapper_8_.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  //z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 90%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper_8_.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#wrapper_8_.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper_8_ {
+    padding-left: 0px;
+  }
+  #wrapper_8_.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0px;
+  }
+  #wrapper_8_.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper_8_.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+#toggleSidebar {
+  float: left;
+  color: #779DD7;
+  padding: 2px 4px;
+}
+
+#container_8_ {
+  display: block;
+  width: 100%;
+  height: 700px; //top: -100px;
+  //left: -200px;
+  //background: #ccc;
+}
+
+.latestblock_8_ {
+  width: 150px; //height: 350px;
+  //min-width: 50px;
+  min-height: 50px; //background: #e00;
+  position: absolute;
+}
+
+
+///////////
+
+
+.flip .card_12_1.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_1 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_1 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_1 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_1 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_1 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+//////
+.flip .card_12_2.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_2 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_2 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_2 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_2 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_2 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_3.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_3 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_3 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_3 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_3 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_3 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_4.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_4 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_4 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_4 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_4 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_4 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_5.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_5 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_5 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_5 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_5 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_5 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_6.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_6 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_6 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_6 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_6 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_6 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_7.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_7 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_7 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_7 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_7 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_7 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_8.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_8 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_8 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_8 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_8 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_8 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_9.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_9 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_9 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_9 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_9 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_9 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_10.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_10 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_10 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_10 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_10 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_10 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_11.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_11 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_11 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_11 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_11 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_11 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+/////
+.flip .card_12_12.flipped {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip .card_12_12 {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip .card_12_12 .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+}
+
+.flip .card_12_12 .front {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip .card_12_12 .img {
+  position: relaitve;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.flip .card_12_12 .back {
+  padding-top: 0%;
+  -webkit-transform: rotatey(-180deg);
+  transform: rotatey(-180deg);
+}
+
+
+/* Toggle Styles */
+
+#wrapper_12_ {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: inline-block;
+}
+
+#wrapper_12_.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  //z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 90%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper_12_.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#wrapper_12_.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #999999;
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper_12_ {
+    padding-left: 0px;
+  }
+  #wrapper_12_.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0px;
+  }
+  #wrapper_12_.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper_12_.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+#toggleSidebar {
+  float: left;
+  color: #779DD7;
+  padding: 2px 4px;
+}
+
+#container_12_ {
+  display: block;
+  width: 100%;
+  height: 700px; //top: -100px;
+  //left: -200px;
+  //background: #ccc;
+}
+
+.latestblock_12_ {
+  width: 150px; //height: 350px;
+  //min-width: 50px;
+  min-height: 50px; //background: #e00;
+  position: absolute;
+}

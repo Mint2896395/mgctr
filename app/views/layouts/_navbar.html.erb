@@ -1,0 +1,63 @@
+<% if user_signed_in? %>
+ 
+<div id="navbar" class="container-fluid">
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default">
+      <li><a class="navbar-brand" href="/">
+      <span class="icon-stack">
+        <i class="fa fa-circle-thin icon-stack-3x"></i>
+        <i class="fa fa-circle-thin icon-stack-2x"></i>
+        <i class="fa fa-circle-thin icon-stack-1x"></i>
+      </span>
+      </a></li>
+        <li><select id='cbo_Spread' name="cbo_Spread" class="cbSpread cbFont2" onchange="return cbo_Spread_onchange(this)">
+            <option  value="1">Ask Question</option>
+            <option  value="2">Relationship</option>
+            <option  value="3">Past, Present, Future</option>
+            <option  value="4">Ask Solution</option>
+            <option  value="5">Transition</option>
+            <option  value="6">10 Cards</option>
+            <option  value="7">Magician</option>
+        </select></li>
+        
+        <li><%= simple_form_for Setting.first, :method => :put, validate: true do |f| %>
+            <%= f.select :setting01, [['Rider Waite Smith 1909', "images03"], 
+                                ['Tarot of the New Vision', "images05"],
+                                ['After Tarot', "images04"],
+                                ['78 Doors Tarot', "images02"],
+                                ['The Norse Tarot', "images01"],
+                                ['Wheel of the Year Tarot', "images06"],
+                                ['Green Witch Tarot', "images07"],
+                                ['Golden Tarot Of The Tsar', "images13"],
+                                ['Pagan Tarot', "images12"],
+                                ['Everyday Witch Tarot', "images11"],
+                                ['Tarot Mucha', "images08"],
+                                ['Lo Scarabeo Tarot', "images09"],
+                                ['The Bright Idea Tarot', "images10"],
+                                ['Tarot Apokalypsis', "images14"],
+                                ['Gnomes Tarot', "images15"],
+                                ['The Book of Shadows Vol 2', "images16"],
+                                ], {}, { :class => 'cbCardDeck cbFont2' , :onchange => 'this.form.submit()'} %>
+        <% end %></li>
+      <ul class="organon-menu-right">
+          <li class="organon-encyclopedia"><a href="#" data-toggle="modal" data-target="#encyclopedia"><i class="fa fa-university"></i></a></li>
+          <li class="organon-encyclopedia"><a href="/meaning">♛</a></li>
+      </ul>
+      
+    </div>
+    </nav>
+</div>
+
+ <% end %>
+
+<script>
+$("#cbo_Spread").change(function() { 
+   window.location.pathname = $(this).val();
+});
+
+var xyz = "<%= request.env['PATH_INFO'] %>" ;
+var n = xyz.lastIndexOf('/');
+var xyzz = xyz.substring(n + 1);
+window.onload = function () { document.getElementById("cbo_Spread").selectedIndex = xyzz - 1} ;
+
+</script>

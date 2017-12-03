@@ -1,0 +1,280 @@
+<!-- Start group2 here!!!-->
+
+<div id = "group02">
+
+<% if notfirstpage == "card2" || notfirstpage1 == "page" %>
+<table>
+<% @cards.each_with_index do |card, index| %>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= link_to(card.person.name, card2_path(person_id: card.person)) %>
+     (<%= index + 1 %>)
+    </span>
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount">
+    
+    </span>
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+<% end %>
+<% end %>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);">
+      <%= number_with_precision(card.price, precision: 2) %>
+    </span>
+
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr>
+    <span style="position:absolute; font-size: 12.5px; z-index:5; background-color: rgba(41, 43, 44, 0.926);" class="TransactionAmount"><%= number_with_precision(card.diff, precision: 2) %></span>
+
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="10" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+
+<table>
+  <% @cards.each do |card| %>
+    <tr>
+      
+      <img id= <%= card.card01 %> class="organon-card-front" style="magin-right:10px; z-index:4; " 
+      src="
+    <% if card.card01 == ""  %>
+    <% imageabc01 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc01 = @name + "/mycard" + card.card01 + ".jpg" %>
+    <% end %>
+    <%= imageabc01 %>"
+       alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card01 %>">
+    </tr>
+  <tr>
+  <img id= <%= card.card02 %> class="organon-card-front" style="magin-right:10px; z-index:4; " 
+  src="
+    <% if card.card02 == ""  %>
+    <% imageabc02 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc02 = @name + "/mycard" + card.card02 + ".jpg" %>
+    <% end %>
+    <%= imageabc02 %>"
+  alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card02 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+    <img id= <%= card.card03 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+    src="
+    <% if card.card03 == ""  %>
+    <% imageabc03 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc03 = @name + "/mycard" + card.card03 + ".jpg" %>
+    <% end %>
+    <%= imageabc03 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card03 %>">
+  </tr>
+  <tr>
+    <img id= <%= card.card04 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+    src="
+    <% if card.card04 == ""  %>
+    <% imageabc04 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc04 = @name + "/mycard" + card.card04 + ".jpg" %>
+    <% end %>
+    <%= imageabc04 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card04 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+   <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px">
+        <%= (card.date).strftime('%b%d') %>
+      </span>
+
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr>
+
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+    <tr>
+      
+      <img id= <%= card.card05 %> class="organon-card-front" style="magin-right:10px; z-index:4; " 
+      src="
+    <% if card.card05 == ""  %>
+    <% imageabc05 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc05 = @name + "/mycard" + card.card05 + ".jpg" %>
+    <% end %>
+    <%= imageabc05 %>"
+       alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card05 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card05 %>">
+    </tr>
+  <tr>
+  <img id= <%= card.card06 %> class="organon-card-front" style="magin-right:10px; z-index:4; " 
+  src="
+    <% if card.card06 == ""  %>
+    <% imageabc06 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc06 = @name + "/mycard" + card.card06 + ".jpg" %>
+    <% end %>
+    <%= imageabc06 %>"
+  alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card06 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card06 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+    <img id= <%= card.card07 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+    src="
+    <% if card.card07 == ""  %>
+    <% imageabc07 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc07 = @name + "/mycard" + card.card07 + ".jpg" %>
+    <% end %>
+    <%= imageabc07 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card07 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card07 %>">
+  </tr>
+  <tr>
+    <img id= <%= card.card08 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+    src="
+    <% if card.card08 == ""  %>
+    <% imageabc08 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc08 = @name + "/mycard" + card.card08 + ".jpg" %>
+    <% end %>
+    <%= imageabc08 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card08 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card08 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+   <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px">
+        <%= (card.date + 14).strftime('%b%d') %>
+      </span>
+
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr>
+
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+
+<table>
+  <% @cards.each do |card| %>
+    <tr>  
+
+      <img id= <%= card.card09 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 1;" 
+      src="
+    <% if card.card09 == ""  %>
+    <% imageabc09 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc09 = @name + "/mycard" + card.card09 + ".jpg" %>
+    <% end %>
+    <%= imageabc09 %>"
+       alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card09 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card09 %>">
+    </tr>
+      <tr>
+      <img id= <%= card.card10 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 1;" 
+      src="
+    <% if card.card10 == ""  %>
+    <% imageabc10 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc10 = @name + "/mycard" + card.card10 + ".jpg" %>
+    <% end %>
+    <%= imageabc10 %>"
+       alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card10 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card10 %>">
+      </tr>
+    <tr><span> </span></tr>
+  <% end %>
+</table> 
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+    <img id= <%= card.card11 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+      src="
+    <% if card.card11 == ""  %>
+    <% imageabc11 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc11 = @name + "/mycard" + card.card11 + ".jpg" %>
+    <% end %>
+    <%= imageabc11 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card11 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card11 %>">
+  </tr>
+  <tr>
+    <img id= <%= card.card12 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+      src="
+    <% if card.card12 == ""  %>
+    <% imageabc12 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc12 = @name + "/mycard" + card.card12 + ".jpg" %>
+    <% end %>
+    <%= imageabc12 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card12 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card12 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+<table>
+  <% @cards.each do |card| %>
+  <tr>
+   <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px">
+        <%= (card.date + 28).strftime('%b%d') %>
+      </span>
+
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr>
+
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+</div>
+
+</section>
+
+<script>
+
+$(document).ready(function(){
+
+var btn_same=true;
+    $("#samedate").click(function(e) {
+        if(btn_same) {
+        $("#group01").show(500);
+        $("#group02").hide(500);  
+        btn_same=false;      
+        }else{
+        btn_same=true;
+        $("#group01").hide(500);
+        $("#group02").show(500);          
+        }
+    });
+
+});
+
+
+</script>

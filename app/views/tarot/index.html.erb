@@ -1,0 +1,159 @@
+<div id="content1" class="cbContent1">
+  <div id="cards1" class="cbCards1 organon-card">
+     <%= render "tarot7/carddeck" %>
+  </div> 
+  <div id="spread1" class="cbSpread1" style="overflow-x: hidden; overflow-y: scroll;">
+
+      <div id="3cards"><%= render "tarot/3cards" %></div>
+      
+  </div>
+</div>
+    
+    <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_3_()" >     
+    <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_3_()" >
+    <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_3_" style="top: 47%"></img>
+     <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_3_()" style="top: 37%"></img>
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+        <%= render "tarot8/randommodal" %>
+        <%= render "tarot/3randommodal" %>
+
+
+<script>$('#cbShuffle').draggable();</script>
+
+
+<script>
+
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+   
+function shuffleCards(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#cards1").load(location.href + " #cards1>*", "");
+    } 
+  });
+}
+
+function ClearCard(){
+   
+   $("#contentreload").load(location.href + " #contentreload>*", "");
+   $("#container").load(location.href + " #container>*", "");
+
+    document.getElementById("cardf01").value = "";
+    document.getElementById("cardimage1").style.visibility = 'hidden';
+    document.getElementById("cardback1_13").style.visibility = 'hidden';
+    
+    document.getElementById("cardf02").value = "";
+    document.getElementById("cardimage2").style.visibility = 'hidden';
+    document.getElementById("cardback2_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf03").value = "";
+    document.getElementById("cardimage3").style.visibility = 'hidden';
+    document.getElementById("cardback3_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf04").value = "";
+    document.getElementById("cardimage4").style.visibility = 'hidden';
+    document.getElementById("cardback4_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf05").value = "";
+    document.getElementById("cardimage5").style.visibility = 'hidden';
+    document.getElementById("cardback5_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf06").value = "";
+    document.getElementById("cardimage6").style.visibility = 'hidden';
+    document.getElementById("cardback6_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf07").value = "";
+    document.getElementById("cardimage7").style.visibility = 'hidden';
+    document.getElementById("cardback7_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf08").value = "";
+    document.getElementById("cardimage8").style.visibility = 'hidden';
+    document.getElementById("cardback8_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf09").value = "";
+    document.getElementById("cardimage9").style.visibility = 'hidden';
+    document.getElementById("cardback9_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf10").value = "";
+    document.getElementById("cardimage10").style.visibility = 'hidden';
+    document.getElementById("cardback10_13").style.visibility = 'hidden';
+
+    document.getElementById("cardf11").value = "";
+    document.getElementById("cardimage11").style.visibility = 'hidden';
+    document.getElementById("cardback11_13").style.visibility = 'hidden';
+    
+    document.getElementById("cardf12").value = "";
+    document.getElementById("cardimage12").style.visibility = 'hidden';
+    document.getElementById("cardback12_13").style.visibility = 'hidden';
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+    $(ev.target).css('background-color','#d3d3d3');
+}
+
+function removeStyle(ev) {
+     $(ev.target).removeAttr('style');
+}
+
+$('.f').hover(makeBigger, returnToOriginalSize);
+
+function makeBigger() {
+    $(this).css({height: '+=60%', width: '+=30%'});
+}
+function returnToOriginalSize() {
+    $(this).css({height: "", width: ""});
+}
+
+function handleDragStart(e) {
+    var dragIcon = document.createElement('img');
+    dragIcon.src = '../<%= @name %>/CardBack.jpg';
+    var div = document.getElementsByClassName('mgCard organon-card-front');
+    e.dataTransfer.setDragImage(dragIcon, 150, 350);
+}
+
+this.addEventListener('dragstart', handleDragStart, false);
+
+
+</script>
+<script>
+window.onload = function(){
+    document.getElementById("cbo_Spread").selectedIndex = 2 ;
+}
+</script>
+
+<!-- Menu Toggle Script -->
+    <script>
+    
+
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    $("#selectized").change(function () {
+        $("#wrapper").toggleClass("toggled");
+        var abcd = document.getElementById("selectized").options[this.selectedIndex].innerHTML;
+        document.getElementById("nameselect").innerHTML = abcd;
+    });
+
+    
+    </script>

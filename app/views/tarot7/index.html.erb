@@ -1,0 +1,315 @@
+<div id="content1" class="cbContent1">
+  <div id="cards1" class="cbCards1 organon-card">
+     <%= render "tarot7/carddeck" %>
+  </div> 
+  <div id="spread1" class="cbSpread1" style="">
+     <div id="12cards"><%= render "tarot7/12cards" %></div>
+     <div id="1card" class="hidden"><%= render "tarot1/1card" %></div>
+     <div id="2cards" class="hidden"><%= render "tarot2/2cardsnew" %></div>
+     <div id="3cards" class="hidden"><%= render "tarot/3cardsnew" %></div>
+     <div id="4cards" class="hidden"><%= render "tarot7/4cards" %></div>
+     <div id="5cards" class="hidden"><%= render "tarot7/5cards" %></div>
+     <div id="6cards" class="hidden"><%= render "tarot7/6cards" %></div>
+     <div id="10cards" class="hidden"><%= render "tarot6/10cards" %></div>
+  </div>
+</div>
+
+    
+    
+    <img id= "1card_b" class="cbShuffle hideicon" alt="" src="../imagesxx/1icon.png" style="top: 36%; left: 1%;"; title="1 cards" onclick="return resethideicon()" >
+    <img id= "2cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/2icon.png" style="top: 42%; left: 1%;"; title="2 cards" onclick="return resethideicon()" >
+    <img id= "3cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/3icon.png" style="top: 48%; left: 1%;"; title="3 cards" onclick="return resethideicon()" >
+    <img id= "4cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/4icon.png" style="top: 54%; left: 1%;"; title="4 cards" onclick="return resethideicon()" >
+    <img id= "5cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/5icon.png" style="top: 62%; left: 1%;"; title="5 cards" onclick="return resethideicon()" >
+    <img id= "6cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/6icon.png" style="top: 70%; left: 1%;"; title="6 cards" onclick="return resethideicon()" >
+    <img id= "10cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/10icon.png" style="top: 78%; left: 1%;"; title="10 cards" onclick="return resethideicon()" >
+    <img id= "12cards_b" class="cbShuffle hideicon" alt="" src="../imagesxx/12icon.png" style="top: 86%; left: 1%;"; title="12 cards" onclick="return resethideicon()" >
+
+    
+
+     <div id="12cards">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_12_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_12_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_12_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_12_()" style="top: 37%"></img>
+    </div>
+    
+     <div id="1card_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return flip_1_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_1_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_1_" style="top: 47%"></img>
+        
+     </div>
+
+     <div id="2cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_2_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_2_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_2_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_2_()" style="top: 37%"></img>
+     </div>
+
+     <div id="3cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_3_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_3_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_3_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_3_()" style="top: 37%"></img>
+     </div>
+     <div id="4cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_4_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_4_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_4_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_4_()" style="top: 37%"></img>
+     </div>
+
+     <div id="5cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_5_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_5_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_5_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_5_()" style="top: 37%"></img>
+     </div>
+
+     <div id="6cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_6_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_6_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_6_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_6_()" style="top: 37%"></img>
+     </div>
+
+     <div id="10cards_x" class="hidden">
+        <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_10_()" >
+        <img class="cbShuffle lefthand" alt="" src="../imagesxx/button05.png" style="top: 93%; left: 1%;"; title="Clear cards" onclick="return ClearCard_10_()" >
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal_10_" style="top: 47%"></img>
+        <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_10_()" style="top: 37%"></img>
+     </div>
+
+
+
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+        <%= render "tarot7/12randommodal" %>
+        <%= render "tarot7/6randommodal" %>
+        <%= render "tarot7/5randommodal" %>
+        <%= render "tarot7/4randommodal" %>
+        <%= render "tarot6/10randommodal" %>
+        <%= render "tarot/3randommodal" %>
+        <%= render "tarot2/2randommodal" %>
+        <%= render "tarot1/1randommodal" %>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#1card_b").click(function(){
+        $("#1card").show(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+        $("#1card_x").show(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+    });
+
+    $("#2cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").show(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+        $("#1card_x").hide(500);
+        $("#2cards_x").show(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+    });
+    $("#3cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").show(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+        $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").show(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+        
+    });
+
+    $("#4cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").show(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+         $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").show(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+    });
+
+    $("#5cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").show(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+         $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").show(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+    });
+
+    $("#6cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").show(500);
+        $("#10cards").hide(500);
+        $("#12cards").hide(500);
+         $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").show(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").hide(500);
+    });
+
+    $("#10cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").show(500);
+        $("#12cards").hide(500);
+         $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").show(500);
+        $("#12cards_x").hide(500);
+    });
+
+    $("#12cards_b").click(function(){
+        $("#1card").hide(500);
+        $("#2cards").hide(500);
+        $("#3cards").hide(500);
+        $("#4cards").hide(500);
+        $("#5cards").hide(500);
+        $("#6cards").hide(500);
+        $("#10cards").hide(500);
+        $("#12cards").show(500);
+         $("#1card_x").hide(500);
+        $("#2cards_x").hide(500);
+        $("#3cards_x").hide(500);
+        $("#4cards_x").hide(500);
+        $("#5cards_x").hide(500);
+        $("#6cards_x").hide(500);
+        $("#10cards_x").hide(500);
+        $("#12cards_x").show(500);
+    });
+});
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+   
+function shuffleCards(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#cards1").load(location.href + " #cards1>*", "");
+    } 
+  });
+}
+
+
+
+function allowDrop(ev) {
+  ev.preventDefault();
+    $(ev.target).css('background-color','#d3d3d3');
+}
+
+function removeStyle(ev) {
+     $(ev.target).removeAttr('style');
+}
+
+$('.f').hover(makeBigger, returnToOriginalSize);
+
+
+function makeBigger() {
+    $(this).css({height: '+=60%', width: '+=30%'});
+}
+function returnToOriginalSize() {
+    $(this).css({height: "", width: ""});
+}
+
+function handleDragStart(e) {
+    var dragIcon = document.createElement('img');
+    dragIcon.src = '../<%= @name %>/CardBack.jpg';
+    var div = document.getElementsByClassName('mgCard organon-card-front');
+    e.dataTransfer.setDragImage(dragIcon, 150, 350);
+}
+
+this.addEventListener('dragstart', handleDragStart, false);
+
+
+</script>
+
+
+

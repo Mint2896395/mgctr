@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <%= render "layouts/header" %>
+  
+  <body class="defaultBody">
+  
+    <%= render "layouts/navbar" %>
+    <p class="alert"><%= alert %></p>
+
+    <!-- Begin page content -->
+    <div id="conmain" class="container-fluid body-content">
+    <%= yield %>
+    </div>
+    
+    <%= render "layouts/cardmodal" %>
+
+  </body>
+
+  <%= render "layouts/rightbutton" %>
+  <%= render "layouts/footer" %>
+  <%= render "home/usermodal" %>
+
+</html>
+
+<script>
+  document.addEventListener('touchstart', touchstartHandler, {passive: false});
+  document.addEventListener('touchmove', touchmoveHandler, {passive: false});
+</script>
+
+

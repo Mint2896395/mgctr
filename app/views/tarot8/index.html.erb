@@ -1,0 +1,138 @@
+<div id="content1" class="cbContent1">
+  <div id="cards1" class="cbCards1">
+    <%= render "tarot7/carddeck" %>
+  </div>  
+  <div id="spread1" class="cbSpread3">
+
+    <div id="12cardhoon"><%= render "cards/12cardhoon" %></div>
+    
+  </div>
+</div>
+
+    <img href="#" class="cbShuffle" alt="" src="../imagesxx/button04.png" data-toggle="modal" data-target="#randomModal" style="top: 47%"></img>
+    
+    
+    <img class="cbShuffle" alt="" src="../imagesxx/flip.png" style="top: 93%"; title="Flip cards" onclick="return beforeflip_8_()" >
+    
+     
+    <%= link_to '/card2' do %>
+      <img class="cbShuffle" alt="" src="../imagesxx/button01.png" style="left:1%; top: 93%"; title="go to cards">
+    <% end %>
+
+     <img href="#" class="cbShuffle" alt="" src="../imagesxx/sword.png" title="One cards" onclick="return oneCard_8_()" style="top: 37%"></img>
+
+
+        <%= render "tarot/compareAllmodal" %>
+        <%= render "tarot/comparemodal" %>
+        <%= render "tarot8/randommodal" %>
+
+<script>
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+
+   
+function shuffleCards(){
+    $("#cards1").load(location.href + " #cards1");
+}
+
+function ClearCard(){
+  $.ajax({
+    url: "tarot.html",
+    cache: false,
+    success: function(data){
+        $("#spread1").load(location.href + " #spread1>*", "");
+    } 
+  });
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+    $(ev.target).css('background-color','#d3d3d3');
+}
+
+function removeStyle(ev) {
+     $(ev.target).removeAttr('style');
+}
+
+$('.f').hover(makeBigger, returnToOriginalSize);
+
+function makeBigger() {
+    $(this).css({height: '+=60%', width: '+=30%'});
+}
+function returnToOriginalSize() {
+    $(this).css({height: "", width: ""});
+}
+
+
+function handleDragStart(e) {
+    var dragIcon = document.createElement('img');
+    dragIcon.src = '../<%= @name %>/CardBack.jpg';
+    e.dataTransfer.setDragImage(dragIcon, 150, 350);
+}
+
+this.addEventListener('dragstart', handleDragStart, false);
+
+
+</script>
+
+ <!-- Menu Toggle Script -->
+    <script>
+    window.addEventListener('load', 
+    function() { 
+        var abcd = '<%=Person.find(@selectedname).name%>';
+        document.getElementById("nameselect_8_").innerHTML = abcd;
+        document.getElementById('fullscreen').click();
+        oneCard_8_()
+    }, false);
+
+    
+    
+    $(".menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper_8_").toggleClass("toggled");
+    });
+
+    $("#selectized_8_").change(function () {
+        $("#wrapper_8_").toggleClass("toggled");
+        var abcd = document.getElementById("selectized_8_").options[this.selectedIndex].innerHTML;
+        document.getElementById("nameselect_8_").innerHTML = abcd;
+    });
+
+function dragLeave(e){
+  if (e.stopPropagation) e.stopPropagation();
+  this.className = this.className.replace('dropover','');
+}
+
+function dragOver(e){
+  if (e.stopPropagation) e.stopPropagation();
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'copy';
+  return false; 
+}
+
+function beforeflip_8_() {
+    if(btn_sword_8_) {
+        flip_8_()
+    }else{
+        oneCard_8_()
+        setTimeout(function(){
+            flip_8_()
+        }, 1000); 
+        btn_sword_8_=true;
+    }
+}
+    
+    </script>

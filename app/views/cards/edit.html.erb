@@ -1,0 +1,109 @@
+
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="col col-lg-2" style="padding-left: 1%;">
+<h1>Editing Card</h1>
+    <%= simple_form_for(@card) do |f| %>
+            <%= f.association :person %>
+            <%= f.input :name , as: :text %>
+            <div class= "row">
+                <div class= "col-sm-6">
+                  <%= f.input :price %>
+            </div>
+            <div class= "col-sm-6">
+            <%= f.input :diff %>
+            </div>
+              </div>
+              <%= f.input :date %>
+              <div class="band">
+                <%= f.input :card01 %>
+                <%= f.input :card02 %>
+                <%= f.input :card03 %>
+                <%= f.input :card04 %>
+                <%= f.input :card05 %>
+                <%= f.input :card06 %>
+                <%= f.input :card07 %>
+                <%= f.input :card08 %>
+                <%= f.input :card09 %>
+                <%= f.input :card10 %>
+                <%= f.input :card11 %>
+                <%= f.input :card12 %>
+              </div>
+          <div class="form-actions">
+            <%= f.button :submit %>
+          </div>
+        <% end %>
+        <br>
+        <%= link_to 'Show', @card %> |
+        <%= link_to 'Back', cards_path %>
+  </div>
+  <div class="col">
+    <tbody>
+      <% @setting = Setting.first %>
+      <% @name = @setting.setting01 %>
+      <div class="band3">
+      <tr>
+        <td><img id= <%= @card.card01 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card01%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card01 %>"></td>
+
+        <td><img id= <%= @card.card02 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card02%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card02 %>"></td>
+
+        <td><img id= <%= @card.card03 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card03%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card03 %>"></td>
+   
+        <td><img id= <%= @card.card04 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card04%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card04 %>"></td>
+      </tr>
+      <tr>
+        <td><img id= <%= @card.card05 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card05%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card05 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card05 %>"></td>
+
+        <td><img id= <%= @card.card06 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card06%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card06 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card06 %>"></td>
+
+        <td><img id= <%= @card.card07 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card07%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card07 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card07 %>"></td>
+
+        <td><img id= <%= @card.card08 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card08%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card08 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card08 %>"></td>
+      </tr>
+      <tr>
+        <td><img id= <%= @card.card09 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card09%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card09 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card09 %>"></td>
+
+        <td><img id= <%= @card.card10 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card10%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card10 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card10 %>"></td>
+
+        <td><img id= <%= @card.card11 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card11%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card11 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card11 %>"></td>
+
+        <td><img id= <%= @card.card12 %> class="organon-card-front" src="/<%= @name %>/mycard<%=@card.card12%>.jpg" alt="" border="1" height="280" width="172" onclick= "compare(<%= @card.card12 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= @card.card12 %>"></td>  
+      </tr>
+      </div>
+    </tbody>
+  </div>
+</div>
+
+
+  <%= render "tarot/compareAllmodal" %>
+  <%= render "tarot/comparemodal" %>
+
+<script>
+
+function compare(abc) {
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+}
+
+var els = document.getElementsByClassName('TransactionAmount');
+for (var i = 0; i < els.length; i++) {
+  var cell = els[i];
+  if (cell.textContent < 0) {
+    cell.classList.remove('green')
+  } else {
+    cell.classList.add('green');
+  }
+}
+
+</script>

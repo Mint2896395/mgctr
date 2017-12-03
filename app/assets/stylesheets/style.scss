@@ -1,0 +1,450 @@
+/* The navigation bar */
+:focus {
+	outline: none !important;
+}
+
+#B {
+	position: fixed;
+	top: 11%;
+	right: 155px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.navbar1 {
+	overflow: hidden;
+	//background-color: #333;
+	position: fixed;
+	/* Set the navbar to fixed position */
+	top: 10%;
+	right: 5px;
+	/* Position the navbar at the top of the page */
+	width: 148px;
+	/* Full width */
+	margin: 5px;
+}
+.navbar2 {
+	overflow: hidden;
+	//background-color: #333;
+	position: fixed;
+	/* Set the navbar to fixed position */
+	bottom: -600px;
+	right: 5px;
+	/* Position the navbar at the top of the page */
+	width: 120px;
+	/* Full width */
+	margin: -5px;
+	z-index: 9999999;
+}
+
+
+/* Links inside the navbar */
+
+.navbar1 a {
+	float: left;
+	color: #f2f2f294;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+/* Main content */
+
+.main {
+	margin-top: 30px;
+	/* Add a top margin to avoid content overlay */
+}
+
+.clickableAwesomeFont {
+	cursor: pointer
+}
+
+	.fa-bars:hover {
+	color: #0275d8;
+}
+
+
+#bodyq {
+	background-color: #ff4814;
+}
+
+#containerq {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -64.5px;
+	margin-top: -85.5px;
+}
+
+.ghost {
+	animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+	50% {
+		transform: translate(0, 20px);
+	}
+}
+
+.shadowFrame {
+	width: 130px;
+	margin-top: 15px;
+}
+
+.shadow {
+	animation: shrink 3s ease-out infinite;
+	transform-origin: center center;
+	ellipse {
+		transform-origin: center center;
+	}
+}
+
+@keyframes shrink {
+	0% {
+		width: 90%;
+		margin: 0 5%;
+	}
+	50% {
+		width: 60%;
+		margin: 0 18%;
+	}
+	100% {
+		width: 90%;
+		margin: 0 5%;
+	}
+}
+
+table.floatThead-table {
+	border-top: none;
+	border-bottom: none;
+	background-color: #fff;
+}
+
+.table-condensed {
+	font-size: 14px;
+}
+
+#dropzone {
+	position: absolute;
+	left: 3vh;
+	//background: rgba(153, 153, 153, 0.068);
+	background: #d3d3d3;
+	opacity: 0.05;
+	width: 90vw;
+	height: 60vh;
+	line-height: 50px;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 1.25em;
+	border-radius: 5px;
+	-webkit-transition: background .25s ease-in;
+	transition: background .25s ease-in;
+	z-index: 1;
+}
+
+	.collection_radio_buttons {
+	font-weight: normal;
+	padding-right: 15px;
+	padding-left: 5px;
+
+}
+
+.thumbnail {
+	margin-bottom: 6px;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+ #baguetteBox-overlay {
+ 	display: none;
+ 	opacity: 0;
+ 	position: fixed;
+ 	overflow: hidden;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	z-index: 1000000;
+ 	background-color: #222;
+ 	background-color: rgba(0, 0, 0, .8);
+ 	-webkit-transition: opacity .5s ease;
+ 	transition: opacity .5s ease
+ }
+
+ #baguetteBox-overlay.visible {
+ 	opacity: 1
+ }
+
+ #baguetteBox-overlay .full-image {
+ 	display: inline-block;
+ 	position: relative;
+ 	width: 100%;
+ 	height: 100%;
+ 	text-align: center
+ }
+
+ #baguetteBox-overlay .full-image figure {
+ 	display: inline;
+ 	margin: 0;
+ 	height: 100%;
+ }
+
+ #baguetteBox-overlay .full-image img {
+ 	display: inline-block;
+ 	width: auto;
+ 	height: auto;
+ 	max-height: 100%;
+ 	max-width: 100%;
+ 	vertical-align: middle;
+ 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .6);
+ 	box-shadow: 0 0 8px rgba(0, 0, 0, .6)
+ }
+
+ #baguetteBox-overlay .full-image figcaption {
+ 	display: block;
+ 	position: absolute;
+ 	bottom: 0;
+ 	width: 100%;
+ 	text-align: center;
+ 	line-height: 1.8;
+ 	white-space: normal;
+ 	color: #ccc;
+ 	background-color: #000;
+ 	background-color: rgba(0, 0, 0, .6);
+ 	font-family: sans-serif
+ }
+
+ #baguetteBox-overlay .full-image:before {
+ 	content: "";
+ 	display: inline-block;
+ 	height: 50%;
+ 	width: 1px;
+ 	margin-right: -1px
+ }
+
+ #baguetteBox-slider {
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	height: 100%;
+ 	width: 100%;
+ 	white-space: nowrap;
+ 	-webkit-transition: left .4s ease, -webkit-transform .4s ease;
+ 	transition: left .4s ease, -webkit-transform .4s ease;
+ 	transition: left .4s ease, transform .4s ease;
+ 	transition: left .4s ease, transform .4s ease, -webkit-transform .4s ease, -moz-transform .4s ease
+ }
+
+ #baguetteBox-slider.bounce-from-right {
+ 	-webkit-animation: bounceFromRight .4s ease-out;
+ 	animation: bounceFromRight .4s ease-out
+ }
+
+ #baguetteBox-slider.bounce-from-left {
+ 	-webkit-animation: bounceFromLeft .4s ease-out;
+ 	animation: bounceFromLeft .4s ease-out
+ }
+
+ @-webkit-keyframes bounceFromRight {
+ 	0%,
+ 	100% {
+ 		margin-left: 0
+ 	}
+ 	50% {
+ 		margin-left: -30px
+ 	}
+ }
+
+ @keyframes bounceFromRight {
+ 	0%,
+ 	100% {
+ 		margin-left: 0
+ 	}
+ 	50% {
+ 		margin-left: -30px
+ 	}
+ }
+
+ @-webkit-keyframes bounceFromLeft {
+ 	0%,
+ 	100% {
+ 		margin-left: 0
+ 	}
+ 	50% {
+ 		margin-left: 30px
+ 	}
+ }
+
+ @keyframes bounceFromLeft {
+ 	0%,
+ 	100% {
+ 		margin-left: 0
+ 	}
+ 	50% {
+ 		margin-left: 30px
+ 	}
+ }
+
+ .baguetteBox-button#next-button,
+ .baguetteBox-button#previous-button {
+ 	top: 50%;
+ 	top: calc(50% - 30px);
+ 	width: 44px;
+ 	height: 60px
+ }
+
+ .baguetteBox-button {
+ 	position: absolute;
+ 	cursor: pointer;
+ 	outline: 0;
+ 	padding: 0;
+ 	margin: 0;
+ 	border: 0;
+ 	-moz-border-radius: 15%;
+ 	border-radius: 15%;
+ 	background-color: #323232;
+ 	background-color: rgba(50, 50, 50, .5);
+ 	color: #ddd;
+ 	font: 1.6em sans-serif;
+ 	-webkit-transition: background-color .4s ease;
+ 	transition: background-color .4s ease
+ }
+
+ .baguetteBox-button:focus,
+ .baguetteBox-button:hover {
+ 	background-color: rgba(50, 50, 50, .9)
+ }
+
+ .baguetteBox-button#next-button {
+ 	right: -3%
+ }
+
+ .baguetteBox-button#previous-button {
+ 	left: -3%
+ }
+
+ .baguetteBox-button#close-button {
+ 	top: 20px;
+ 	right: 2%;
+ 	right: calc(2% + 6px);
+ 	width: 30px;
+ 	height: 30px
+ }
+
+ .baguetteBox-button svg {
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0
+ }
+
+ .baguetteBox-spinner {
+ 	width: 40px;
+ 	height: 40px;
+ 	display: inline-block;
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	margin-top: -20px;
+ 	margin-left: -20px
+ }
+
+ .baguetteBox-double-bounce1,
+ .baguetteBox-double-bounce2 {
+ 	width: 100%;
+ 	height: 100%;
+ 	-moz-border-radius: 50%;
+ 	border-radius: 50%;
+ 	background-color: #fff;
+ 	opacity: .6;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	-webkit-animation: bounce 2s infinite ease-in-out;
+ 	animation: bounce 2s infinite ease-in-out
+ }
+
+ .baguetteBox-double-bounce2 {
+ 	-webkit-animation-delay: -1s;
+ 	animation-delay: -1s
+ }
+
+ @-webkit-keyframes bounce {
+ 	0%,
+ 	100% {
+ 		-webkit-transform: scale(0);
+ 		transform: scale(0)
+ 	}
+ 	50% {
+ 		-webkit-transform: scale(1);
+ 		transform: scale(1)
+ 	}
+ }
+
+ @keyframes bounce {
+ 	0%,
+ 	100% {
+ 		-webkit-transform: scale(0);
+ 		-moz-transform: scale(0);
+ 		transform: scale(0)
+ 	}
+ 	50% {
+ 		-webkit-transform: scale(1);
+ 		-moz-transform: scale(1);
+ 		transform: scale(1)
+ 	}
+ }
+
+ .icon-stack {
+ 	position: relative;
+ 	display: inline-block;
+ 	width: 2vh;
+ 	height: 2vh;
+	line-height: 2vh;
+ 	vertical-align: middle;
+ }
+
+ .icon-stack-1x,
+ .icon-stack-2x,
+ .icon-stack-3x {
+		position: absolute;
+		font-size: 2vh;
+		line-height: inherit;
+ 	//left: 0;
+ 	//width: 100%;
+ 	//text-align: center;
+ }
+
+ .icon-stack-1x {
+	
+	
+	 padding-left: 0.83em;
+ }
+
+ .icon-stack-2x {
+ 	padding-left: 0.41em;
+ }
+
+ .icon-stack-3x {
+	 padding-left: 0em;
+ }

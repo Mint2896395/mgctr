@@ -1,0 +1,54 @@
+<%= link_to 'New Card', '/8' , {:style=>'float: right; position: relative; right: 10px; top: 7px;', :class => "btn btn-secondary"}%>
+<% notfirstpage = (request.fullpath.split('=').last) %>
+<% notfirstpage2 = (request.original_url.split('/').last) %>
+<% if notfirstpage != "1"  %>
+<p style="float: right; position: relative; top: 15px; right: 30px;"><a href=""
+    onclick="
+    <% @cards.limit(20).each do |card| %> 
+    window.open('<%= edit_card_path(card) %>');        
+    <% end %>
+    ">Edit all</a></p>
+<% end %>
+
+<div id="wrapper1" style="text-align: center; padding-top:0.5%;">    
+    <%#= link_to("All ", card2_path(all: 1)) %>
+    <% if notfirstpage != "1"  %>
+    <a href="<%= request.original_url + "?all=1" %>">All</a>
+      <div style="display: inline-block;  "><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
+    <% end %>
+    <% notfirstpage1 = notfirstpage2.split('=').first %>
+    <% if notfirstpage1 != "card2?person_id"   %>
+      <div style="display: inline-block; ">
+        <%= simple_form_for Setting.last, :method => :put, validate: true do |f| %>
+        <span>Max Y-axis: </span><%= f.select :setting03, [['All', ""], 
+                          ['80', "80"], 
+                          ['40', "40"], 
+                          ['20', "20"], 
+                          ['10', "10"], 
+                          ['5', "5"], 
+                          ['1', "1"], 
+                          ['0.50', "0.50"], 
+                          ['0.25', "0.25"], 
+                          ['0.1', "0.1"], 
+                          ['0.05', "0.05"]
+                          ], {}, { :onchange => 'this.form.submit()'} %>
+        <% end %>
+      </div>
+    <% end %>
+</div>
+
+
+<div style="margin-top: 20px;">
+<% @cards.limit(1).each do |card| %>
+    <span class="noselect" style="display: block;
+    <% if notfirstpage == "1"  %>
+    margin-top: 20px;
+    <% end %>
+    float: left; height: 31vh;
+    text-align: center;
+    background-color: #d3d3d320;
+    width: 97.75%; position: absolute; font-size: 150px; color:#47474730;"><%= card.person.name %></span> 
+<% end %>
+<%= render "cards/cardchart" %>
+</div>
+<br>

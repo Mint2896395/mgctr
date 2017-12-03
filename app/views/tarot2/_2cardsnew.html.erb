@@ -1,0 +1,623 @@
+<div id="wrapper_2_">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav" style="padding: 5px;">
+              <%= render "tarot2/2cardsave" %>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <img id="menu-toggle_2_" class="cbShuffle menu-toggle" alt="" src="../imagesxx/button03.png" style="left:0%; top: 0%"; title="Flip cards" >
+          <a id="nameselect_2_" href="#menu-toggle" class="menu-toggle" style="position: absolute; top: 1.8%; left: 3%; font-size: 14px; color:#474747;" title="name"></a>
+          <%= render "tarot2/2onecard" %>
+          <% @setting = Setting.first %>
+            <% if @setting.setting02 == "true" %>
+            <% meaning = "#compareAllModal"%>
+            <% else %>
+            <% meaning = "#compareModal" %>
+            <% end %>
+            <div id="contentreload_2_" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">      
+        <table class="cb3spread cbFont2" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr class="tr1">
+              <td class="td16"></td>
+              <td class="td33"></td>
+              <td class="td33"></td>
+                <td class="td16"></td>
+                </tr>
+                <tr class="tr9"><td class="td16">
+                </td>
+                <td class="td33">
+                <div class="cbCrd0">
+                  <div class="flip">
+                    <div class="card_2_1"> 
+                      <div class="face front"> 
+                        <div class="inner"> 
+                          <div id="carddrop_2_01" class="cbCrd1 f" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop_2_01(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)">1
+
+                          <img id="cardimage_2_x_1" class="mgCard organon-card-front" style="top: 0%; left: 0%; visibility: hidden; background-size: contain; background-repeat: no-repeat; height: 100%; width: 100%;" src="" draggable="false" ondragstart="drag(event);" onclick="compare(0)" data-toggle="modal" data-target= <%= meaning %> data-card-id="0" data-parent="cards1">
+
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="face back"> 
+                        <div class="inner text-center">
+                          <img id="cardback_2_1" class="cbCrd1" style="border-radius: 5px; text-align:center; visibility: hidden; " src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                        </div>
+                      </div>
+                    </div>	 
+                  </div>
+                </div>
+                </td>
+                <td class="td33">
+                <div class="cbCrd0">
+                  <div class="flip">
+                    <div class="card_2_2"> 
+                      <div class="face front"> 
+                        <div class="inner"> 
+                          <div id="carddrop_2_02" class="cbCrd1 f" onmouseover="target_mouseover(this);" onmouseout="target_mouseout(this);" ondrop="drop_2_02(event)" ondragover="allowDrop(event)" ondragleave="removeStyle(event)">2 
+
+                          <img id="cardimage_2_x_2" class="mgCard organon-card-front" style="top: 0%; left: 0%; visibility: hidden; background-size: contain; background-repeat: no-repeat; height: 100%; width: 100%;" src="" draggable="false" ondragstart="drag(event);" onclick="compare(0)" data-toggle="modal" data-target= <%= meaning %> data-card-id="0" data-parent="cards1">
+
+                          </div>
+                        </div>
+                      </div> 
+                      <div class="face back"> 
+                        <div class="inner text-center">
+                          <img id="cardback_2_2" class="cbCrd1" style="border-radius: 5px; text-align:center; visibility: hidden; " src="./<%= @name %>/CardBack.jpg" draggable="false" ondragstart="drag(event);" onclick="press(event);">
+                        </div>
+                      </div>
+                    </div>	 
+                  </div>
+                </div>
+                </td>
+                <td class="td16">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+  
+
+<script>
+
+function ClearCard_2_(){
+    i_2_ = 1;
+   $("#contentonecard_2_").load(location.href + " #contentonecard_2_>*", "");
+   $("#contentreload_2_").load(location.href + " #contentreload_2_>*", "");
+   $("#container").load(location.href + " #container>*", "");
+
+    document.getElementById("cardf_2_01").value = "";
+    document.getElementById("cardimage_2_1").style.visibility = 'hidden';
+    document.getElementById("cardback_2_1").style.visibility = 'hidden';
+    
+    document.getElementById("cardf_2_02").value = "";
+    document.getElementById("cardimage_2_2").style.visibility = 'hidden';
+    document.getElementById("cardback_2_2").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_03").value = "";
+    document.getElementById("cardimage_2_3").style.visibility = 'hidden';
+    document.getElementById("cardback_2_3").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_04").value = "";
+    document.getElementById("cardimage_2_4").style.visibility = 'hidden';
+    document.getElementById("cardback_2_4").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_05").value = "";
+    document.getElementById("cardimage_2_5").style.visibility = 'hidden';
+    document.getElementById("cardback_2_5").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_06").value = "";
+    document.getElementById("cardimage_12").style.visibility = 'hidden';
+    document.getElementById("cardback_12").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_07").value = "";
+    document.getElementById("cardimage_2_7").style.visibility = 'hidden';
+    document.getElementById("cardback_2_7").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_08").value = "";
+    document.getElementById("cardimage_2_8").style.visibility = 'hidden';
+    document.getElementById("cardback_2_8").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_09").value = "";
+    document.getElementById("cardimage_2_9").style.visibility = 'hidden';
+    document.getElementById("cardback_2_9").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_10").value = "";
+    document.getElementById("cardimage_2_10").style.visibility = 'hidden';
+    document.getElementById("cardback_2_10").style.visibility = 'hidden';
+
+    document.getElementById("cardf_2_11").value = "";
+    document.getElementById("cardimage_2_11").style.visibility = 'hidden';
+    document.getElementById("cardback_2_11").style.visibility = 'hidden';
+    
+    document.getElementById("cardf_2_12").value = "";
+    document.getElementById("cardimage_2_12").style.visibility = 'hidden';
+    document.getElementById("cardback_2_12").style.visibility = 'hidden';
+}
+
+function drag(ev) {
+    var el = ev.target;
+    var parent = el.getAttribute("data-parent");
+    
+    if(!parent){
+        el.setAttribute("data-parent", el.parentNode.id);
+    }
+    
+    ev.dataTransfer.setData("Text", el.id);
+    
+}
+
+function drop_2_01(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_1").setAttribute('onclick', "return flip_2_1()");
+    document.getElementById("carddrop_2_01").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+
+    document.getElementById("cardback_2_1").style.visibility = 'visible';
+    document.getElementById("cardback_2_1").setAttribute('id', abc.id);
+    $('.card_2_1').toggleClass('flipped');
+
+    document.getElementById("cardf_2_01").value = abc.id;
+    document.getElementById("cardimage_2_1").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_1").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_1").style.visibility = 'visible';
+}
+
+function drop_2_02(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_2").setAttribute('onclick', "return flip_2_2()");
+    document.getElementById("carddrop_2_02").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_2").style.visibility = 'visible';
+    document.getElementById("cardback_2_2").setAttribute('id', abc.id);
+    $('.card_2_2').toggleClass('flipped');
+
+    document.getElementById("cardf_2_02").value = abc.id;
+    document.getElementById("cardimage_2_2").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_2").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_2").style.visibility = 'visible';
+}
+
+function drop_2_03(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_3").setAttribute('onclick', "return flip_2_3()");
+    document.getElementById("carddrop_2_03").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_3").style.visibility = 'visible';
+    document.getElementById("cardback_2_3").setAttribute('id', abc.id);
+    $('.card_2_3').toggleClass('flipped');
+
+    document.getElementById("cardf_2_03").value = abc.id;
+    document.getElementById("cardimage_2_3").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_3").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_3").style.visibility = 'visible';
+}
+
+function drop_2_04(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_4").setAttribute('onclick', "return flip_2_4()");
+    document.getElementById("carddrop_2_04").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_4").style.visibility = 'visible';
+    document.getElementById("cardback_2_4").setAttribute('id', abc.id);
+    $('.card_2_4').toggleClass('flipped');
+
+    document.getElementById("cardf_2_04").value = abc.id;
+    document.getElementById("cardimage_2_4").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_4").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_4").style.visibility = 'visible';
+}
+function drop_2_05(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_5").setAttribute('onclick', "return flip_2_5()");
+    document.getElementById("carddrop_2_05").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+
+    document.getElementById("cardback_2_5").style.visibility = 'visible';
+    document.getElementById("cardback_2_5").setAttribute('id', abc.id);
+    $('.card_2_5').toggleClass('flipped');
+
+    document.getElementById("cardf_2_05").value = abc.id;
+    document.getElementById("cardimage_2_5").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_5").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_5").style.visibility = 'visible';
+}
+function drop_2_06(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_6").setAttribute('onclick', "return flip_2_6()");
+    document.getElementById("carddrop_2_06").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_6").style.visibility = 'visible';
+    document.getElementById("cardback_2_6").setAttribute('id', abc.id);
+    $('.card_2_6').toggleClass('flipped');
+
+    document.getElementById("cardf_2_06").value = abc.id;
+    document.getElementById("cardimage_2_6").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_6").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_6").style.visibility = 'visible';
+}
+function drop_2_07(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_7").setAttribute('onclick', "return flip_2_7()");
+    document.getElementById("carddrop_2_07").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_7").style.visibility = 'visible';
+    document.getElementById("cardback_2_7").setAttribute('id', abc.id);
+    $('.card_2_7').toggleClass('flipped');
+
+    document.getElementById("cardf_2_07").value = abc.id;
+    document.getElementById("cardimage_2_7").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_7").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_7").style.visibility = 'visible';
+}
+function drop_2_08(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_8").setAttribute('onclick', "return flip_2_8()");
+    document.getElementById("carddrop_2_08").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_8").style.visibility = 'visible';
+    document.getElementById("cardback_2_8").setAttribute('id', abc.id);
+    $('.card_2_8').toggleClass('flipped');
+
+    document.getElementById("cardf_2_08").value = abc.id;
+    document.getElementById("cardimage_2_8").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_8").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_8").style.visibility = 'visible';
+}
+function drop_2_09(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_9").setAttribute('onclick', "return flip_2_9()");
+    document.getElementById("carddrop_2_09").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_9").style.visibility = 'visible';
+    document.getElementById("cardback_2_9").setAttribute('id', abc.id);
+    $('.card_2_9').toggleClass('flipped');
+
+    document.getElementById("cardf_2_09").value = abc.id;
+    document.getElementById("cardimage_2_9").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_9").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_9").style.visibility = 'visible';
+}
+function drop_2_10(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_10").setAttribute('onclick', "return flip_2_10()");
+    document.getElementById("carddrop_2_10").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_10").style.visibility = 'visible';
+    document.getElementById("cardback_2_10").setAttribute('id', abc.id);
+    $('.card_2_10').toggleClass('flipped');
+
+    document.getElementById("cardf_2_10").value = abc.id;
+    document.getElementById("cardimage_2_10").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_10").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_10").style.visibility = 'visible';
+}
+function drop_2_11(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_11").setAttribute('onclick', "return flip_2_11()");
+    document.getElementById("carddrop_2_11").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_11").style.visibility = 'visible';
+    document.getElementById("cardback_2_11").setAttribute('id', abc.id);
+    $('.card_2_11').toggleClass('flipped');
+
+    document.getElementById("cardf_2_11").value = abc.id;
+    document.getElementById("cardimage_2_11").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_11").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_11").style.visibility = 'visible';
+}
+function drop_2_12(ev) {
+
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    document.getElementById(data).style.height = "100%";
+    document.getElementById(data).style.width = "100%";
+    document.getElementById(data).style.left = "0%";
+    document.getElementById(data).style.top = "0%";
+    document.getElementById(data).setAttribute('draggable', false);
+    document.getElementById(data).setAttribute('onclick', "compare()");
+    document.getElementById(data).setAttribute('data-toggle', "modal");
+    document.getElementById("cardback_2_12").setAttribute('onclick', "return flip_2_12()");
+    document.getElementById("carddrop_2_12").setAttribute('ondragleave', "");
+
+    var abc =  document.getElementById(data);
+    document.getElementById(data).src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById(data).setAttribute('onclick', "compare(" + abc.id + ")" );
+    
+
+    document.getElementById("cardback_2_12").style.visibility = 'visible';
+    document.getElementById("cardback_2_12").setAttribute('id', abc.id);
+    $('.card_2_12').toggleClass('flipped');
+
+    document.getElementById("cardf_2_12").value = abc.id;
+    document.getElementById("cardimage_2_12").src = "/<%= @name %>/mycard" + abc.id + ".jpg";
+    document.getElementById("cardback_2_12").src = "./<%= @name %>/CardBack.jpg";
+    document.getElementById("cardimage_2_12").style.visibility = 'visible';
+}
+
+function dragEnd(ev){
+    if(ev.dataTransfer.dropEffect == "none"){
+         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
+        
+        parent.appendChild(ev.target);
+        
+    }
+}
+
+function flip_2_() {
+    $('.card_2_1').toggleClass('flipped');
+    $('.card_2_2').toggleClass('flipped');
+    $('.card_2_3').toggleClass('flipped');
+    $('.card_2_4').toggleClass('flipped');
+    $('.card_2_5').toggleClass('flipped');
+    $('.card_2_6').toggleClass('flipped');
+    $('.card_2_7').toggleClass('flipped');
+    $('.card_2_8').toggleClass('flipped');
+    $('.card_2_9').toggleClass('flipped');
+    $('.card_2_10').toggleClass('flipped');
+    $('.card_2_11').toggleClass('flipped');
+    $('.card_2_12').toggleClass('flipped');
+}
+function flip_2_1() {
+    $('.card_2_1').toggleClass('flipped');
+}
+function flip_2_2() {
+    $('.card_2_2').toggleClass('flipped');
+}
+function flip_2_3() {
+    $('.card_2_3').toggleClass('flipped');
+}
+function flip_2_4() {
+    $('.card_2_4').toggleClass('flipped');
+}
+function flip_2_5() {
+    $('.card_2_5').toggleClass('flipped');
+}
+function flip_2_6() {
+    $('.card_2_6').toggleClass('flipped');
+}
+function flip_2_7() {
+    $('.card_2_7').toggleClass('flipped');
+}
+function flip_2_8() {
+    $('.card_2_8').toggleClass('flipped');
+}
+function flip_2_9() {
+    $('.card_2_9').toggleClass('flipped');
+}
+function flip_2_10() {
+    $('.card_2_10').toggleClass('flipped');
+}
+function flip_2_11() {
+    $('.card_2_11').toggleClass('flipped');
+}
+function flip_2_12() {
+    $('.card_2_12').toggleClass('flipped');
+}
+</script>
+
+ <!-- Menu Toggle Script -->
+    <script>
+    
+    var btn_left_2_=true;
+    $("#menu-toggle_2_").click(function(e) {
+        e.preventDefault();
+        $("#wrapper_2_").toggleClass("toggled");
+        if(btn_left_2_) {
+        $('.lefthand').css('left', '260px');         $('.hideicon').css('visibility', 'hidden');
+        btn_left_2_=false;
+        }else{
+        btn_left_2_=true;
+         $('.lefthand').css('left', '1%');          $('.hideicon').css('visibility', 'visible');
+        }
+    });
+
+    $("#selectized_2_").change(function () {
+        $("#wrapper_2_").toggleClass("toggled");
+        $('.lefthand').css('left', '1%');
+        btn_left_2_=true; 
+        var abcd = document.getElementById("selectized_2_").options[this.selectedIndex].innerHTML;
+        document.getElementById("nameselect_2_").innerHTML = abcd;
+    });
+
+function beforeflip_2_() {
+    if(btn_sword_2_) {
+        flip_2_()
+    }else{
+        oneCard_2_()
+        setTimeout(function(){
+            flip_2_()
+        }, 1000); 
+        btn_sword_2_=true;
+    }
+}
+
+var btn_sword_2_ = true;
+function oneCard_2_(){
+    if(btn_sword_2_) {
+    $('#contentreload_2_').show().delay(1000).hide();
+    $('#contentonecard_2_').hide().delay(1000).show();
+    document.getElementById("contentonecard_2_").style.visibility = 'visible';
+    btn_sword_2_=false;
+    }else{
+    $('#contentreload_2_').hide().delay(1000).show();
+    $('#contentonecard_2_').show().delay(1000).hide();
+   document.getElementById("contentonecard_2_").style.visibility = 'hidden';
+
+    btn_sword_2_=true;
+    }
+}       
+    </script>

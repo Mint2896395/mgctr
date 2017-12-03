@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Person', '#' , {:style=>'float: right; position: relative; top: 10px; right: 10px;', :class => "btn btn-secondary", "data-toggle" => "modal", "data-target" => "#exampleModal"}%>
+<div container>
+<h1>Member</h1>
+  <%= simple_form_for Setting.first, :method => :put, validate: true do |f| %>
+  <%= f.input :setting03, label: false, :input_html => {:style=>'float: right; right:10px; text-align: center; width: 100px;  position: relative;',:id => 'seeid', value: '' , :onclick => 'this.form.submit()'} %>
+  <% end %>
+  <div id="nameselected" style="float: right; position: relative; padding-right: 20px; font-size: 30px; color:#474747;" title="name">Please select Row</div>
+<% @sections = Section.all %>
+  <ul class="nav nav-pills">
+  <% @sections.each do |section| %>
+    <li class="nav-item">
+    <%= link_to(section.name, people_path(section: section.name), 
+                  class: "nav-link #{'active' if params[:section] == section.name}") %>
+    </li>
+  <% end %>
+</ul>
+
+
+        <table id="tableId" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th class="text-center">No.</th>
+              <th class="text-center">Name</th>
+              <th class="text-center">Count</th>
+              <th class="text-center">Birthyear</th>
+              <th class="text-center">Birthmonth</th>
+              <th class="text-center">Birthday</th>
+              <th class="text-center">Birthtime</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @people.each do |person| %>
+              <tr>
+                <td class="text-center"><%= person.id %></td>
+                <td><%= link_to(person.name, cards_path(person_id: person.id)) %></td>
+                <td class="text-center"><%= person.cards.count %></td>
+                <td class="text-center"><%= person.BirthYear %></td>
+                <td class="text-center"><%= person.BirthMonth %></td>
+                <td class="text-center"><%= person.BirthDay %></td>
+                <td class="text-center"><%= person.BirthTime %></td>
+                <td><%= link_to 'Show', person %></td>
+                <td><%= link_to 'Edit', edit_person_path(person) %></td>
+                <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?', verify: 'mgctr78', verify_text: 'Type "mgctr78" to confirm' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+         <ul class="nav nav-pills">
+         <% @people = Person.all %>
+            <% @people.each do |person| %>
+                
+            <% end %>
+            
+          </ul>
+       
+          
+
+<script>
+
+function addRowHandlers() {
+    var table = document.getElementById("tableId");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+        var currentRow = table.rows[i];
+        var createClickHandler = 
+            function(row) 
+            {
+                return function() { 
+                                        var cell = row.getElementsByTagName("td")[0];
+                                        var id = cell.innerHTML;
+                                        //alert("id:" + id);
+                                        document.getElementById('seeid').value = id.toString();
+                                        var cell1 = row.getElementsByTagName("td")[1];
+                                        var id1 = cell1.innerHTML;
+                                        document.getElementById('nameselected').innerHTML = id1.toString();
+                                 };
+            };
+
+        currentRow.onclick = createClickHandler(currentRow);
+    }
+}
+window.onload = addRowHandlers();
+
+</script>

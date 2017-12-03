@@ -1,0 +1,201 @@
+<% if user_signed_in? %>
+  <footer class="footer">
+      <% @setting = Setting.first %>
+      <% name_id = @setting.setting03 %>
+      <% if name_id == "" || name_id == nil
+         @person = Person.last
+         else
+         @person = Person.find(name_id)
+      end %>
+        <% if @person == nil %>
+         <a href="#" data-toggle="modal" data-target="#exampleModal" style="padding-right: 25px;"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+        <% else %>
+          <a href="/people/<%= @person.id %>/edit" style="padding-right: 15px;"><i class="fa fa-user"><%= @person.name %></i></a>
+          <i class="fa fa-mercury" aria-hidden="true"></i>
+          <div id="myspan" style="padding-right: 15px; display:inline;"></div>
+          <span>Ascendant: </span><div id="mysign" style="padding-right: 15px; display:inline;"><i class="fa fa-mercury"></i></div>
+          <i class="fa fa-spinner" aria-hidden="true"></i>
+          <div id="cn_zodiac" style="padding-right: 15px; display:inline;"><i class="fa fa-mercury"></i></div>
+          <div id="BirthYear" style="display:inline;"><%= @person.BirthYear %></div>/
+          <div id="BirthMonth" style="display:inline;"><%= @person.BirthMonth %></div>/
+          <div id="BirthDay" style="display:inline;"><%= @person.BirthDay %></div>
+          <span>(</span><div id="Weekday" style="display:inline;"></div><span>)</span>
+          <div id="BirthTime" style="padding-right: 5px; display:inline; visibility: hidden;"><%= @person.BirthTime %></div>
+          <div id="age" style="padding-right: 5px; display:inline;"></div>
+        <% end %>
+          <span id="By" onclick="myFunctiony()"  style="padding-right: 10px; float: right;"><i class="fa fa-bars  clickableAwesomeFont"></i></span>
+            <% if @person != nil %>
+              <a href="#" data-toggle="modal" data-target="#exampleModal" style="padding-right: 25px;  float: right;"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+            <% end %>
+         
+          <%= render "home/settingmodal" %>
+    </footer>
+<% end %>
+
+    <div id="Ay" class="navbar2">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary" onclick="location.href='/people'"><i class="fa fa-list"></i> User List</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/cards'"><i class="fa fa-folder-open-o"></i> Card List</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/meaning'">♛ Tarot78</button>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#settingModal"><i class="fa fa-cog" aria-hidden="true"></i> Setting</button>
+        <button type="button" class="btn btn-danger"><%= link_to "Logout", destroy_user_session_path, :method => :delete , :data => {:confirm => 'Are you sure?'}%></button>
+      </div>
+    </div>
+
+    <%= render "home/alertmodal" %>
+
+<script>
+
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    }
+  }
+}
+addLoadEvent(func1);
+addLoadEvent(func2);
+
+window.setInterval(function(){
+  /// call your function here
+  func1()
+}, 3000);
+
+function func1() { 
+    ////Zodiac java
+    var day = document.getElementById("BirthDay").innerHTML;
+    var month = document.getElementById("BirthMonth").innerHTML;
+    var birthyear = document.getElementById("BirthYear").innerHTML;
+
+    var zodiname = getZodiacSign(day, month);
+    document.getElementById("myspan").innerHTML = zodiname;
+
+
+    var time = document.getElementById("BirthTime").innerHTML;
+    var asc = Ascendant(zodiname, time);
+    document.getElementById("mysign").innerHTML = asc;
+
+    if (parseInt(month) < 10) {
+      var month_final = String("0" + parseInt(month));
+    } else {
+      var month_final = parseInt(month);
+    }
+
+     if (parseInt(day) < 10) {
+      var day_final = String("0" + parseInt(day));
+    } else {
+      var day_final = parseInt(day);
+    }
+
+    var dateofbirth = String(month_final + "/" + day_final  + "/" + parseInt(birthyear)) ;
+    var val = getAge(dateofbirth);
+
+    document.getElementById("age").innerHTML = val;
+
+    //var cnzodiac = chinese_zodiac(birthyear);
+    //document.getElementById("cn_zodiac").innerHTML = cnzodiac;
+    var cnzodiac = Chinese(day,month,birthyear);
+    document.getElementById("cn_zodiac").innerHTML = cnzodiac;
+
+    var dateString = String(month_final + "/" + day_final  + "/" + parseInt(birthyear)) ;
+    var dob = new Date(
+    dateString.substring(6, 10),
+    dateString.substring(0, 2) - 1,
+    dateString.substring(3, 5)
+    );
+    var weekday = new Array(7);
+    weekday[0] =  "Sun";
+    weekday[1] = "Mon";
+    weekday[2] = "Tue";
+    weekday[3] = "Wed";
+    weekday[4] = "Thu";
+    weekday[5] = "Fri";
+    weekday[6] = "Sat";
+    var n = weekday[dob.getDay()];
+    document.getElementById("Weekday").innerHTML =  n ;
+    
+}
+
+function func2() {
+
+}
+
+
+    $(document).ready(function(){
+
+    var btn_full=true;
+    $("#fullscreen").click(function(){
+        $(this).find('i').toggleClass('fa-expand fa-compress')
+        $("#navbar").slideToggle(600);
+        $(".footer").slideToggle(600);
+        if(btn_full) {
+        $('#conmain').css('top', '0px');
+        $('#conmain').css('bottom', '10px');
+        btn_full=false;
+        }else{
+        btn_full=true;
+         $('#conmain').css('top', '60px');
+         $('#conmain').css('bottom', '50px');
+        }
+     });
+    var btn_deck=true;
+    $("#deckhide").click(function(){
+        $(this).find('i').toggleClass('fa-plus-circle fa-chevron-down')
+        //$("#cards1").slideToggle(600);
+        if(btn_deck) {
+        $('#content1').css('top', '-30%');
+        //$('#spread1').css('top', '0%');
+        //$('#spread1').css('height', '125%');
+        $('#content1').css('height', '130%');
+        btn_deck=false;
+        }else{
+        btn_deck=true;
+         $('#content1').css('top', '0%');
+         //$('#spread1').css('top', '25%');
+         //$('#spread1').css('height', '75%');
+         $('#content1').css('height', '100%');
+    }
+    });
+
+    });
+
+ function changecssstyle() {
+        $('.cbCrd0az').toggleClass("new");
+        $('.cbCrd0a').toggleClass("new");
+        $('.cbCrd1z').toggleClass("new");
+        $('.cbContent1').toggleClass("new");
+        $('.cb4spread').toggleClass("new");
+        $('.cb6spread').toggleClass("new");
+        $('.cbCrd6').toggleClass("new");
+        $('.cbCrd0a6').toggleClass("new");
+        $('.cbCrd6_5').toggleClass("new");
+        $('.cbCrd3').toggleClass("new");
+        $('.cbCrd0a6_5').toggleClass("new");
+    }
+
+var btn_y=true;
+var btn_z=false;
+    function myFunctiony() {
+        if(btn_y) {
+        $('#Ay').animate({"bottom":"50px","width":"120px"}, 500);
+        $('#By').css('color','#0275d8');
+        btn_y=false;
+        btn_z=true;
+        }else{
+        btn_y=true;
+        $('#Ay').animate({"bottom":"-600px","width":"120px"}, 500);
+        $('#By').css('color','');
+        }
+     }
+
+
+</script>
+
+
+

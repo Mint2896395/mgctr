@@ -1,0 +1,53 @@
+<div class="modal fade" id="settingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="settingModalLabel">Setting</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for Setting.first, :method => :put, validate: true do |f| %>
+      <div class="modal-body">
+          <div class="container-fluid">
+              <span>Card Deck:   </span><%= f.select :setting01, [['Rider Waite Smith 1909', "images03"], 
+                                ['Tarot of the New Vision', "images05"],
+                                ['After Tarot', "images04"],
+                                ['78 Doors Tarot', "images02"],
+                                ['The Norse Tarot', "images01"],
+                                ['Wheel of the Year Tarot', "images06"],
+                                ['Green Witch Tarot', "images07"],
+                                ['Golden Tarot Of The Tsar', "images13"],
+                                ['Pagan Tarot', "images12"],
+                                ['Everyday Witch Tarot', "images11"],
+                                ['Tarot Mucha', "images08"],
+                                ['Lo Scarabeo Tarot', "images09"],
+                                ['The Bright Idea Tarot', "images10"],
+                                ['Tarot Apokalypsis', "images14"],
+                                ['Gnomes Tarot', "images15"],
+                                ['The Book of Shadows Vol 2', "images16"],
+                                ] %>
+              <br>
+              <span>No. of Cards:   </span><%= f.collection_radio_buttons :setting02, [[true, 'All'] ,[false, '5 Cards']], :first, :last ,:style =>"display:inline", :default => true %>
+
+      </div>
+      <div class="modal-footer">
+        <a href="/card2" style="padding-right: 10px; float: left;"><i class="fa fa-rocket" aria-hidden="true"></i></a>
+        <button type="button" class="btn btn-danger"><%= link_to "Logout", destroy_user_session_path, :method => :delete %></button>
+        <button type="button" class="btn btn-info"><%= link_to "Cards", cards_path %></button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Skip</button>
+        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+          <i class="icon-ok icon-white"></i> Save
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ 

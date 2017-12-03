@@ -1,0 +1,14 @@
+{
+  "name": "mgctr78",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bower": "^1.5.2",
+    "drag-drop-webkit-mobile": "^1.4.1",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "popper.js": "^1.12.7",
+    "wiredep": "^4.0.0"
+  }
+}
