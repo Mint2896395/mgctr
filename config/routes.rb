@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cardlibraries
+  resources :libraries
   resources :cards
   resources :settings
 

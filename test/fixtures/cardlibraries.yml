@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardid: MyString
+  name: MyString
+  description: MyText
+  cardno: 1
+  value: 1
+  library: one
+
+two:
+  cardid: MyString
+  name: MyString
+  description: MyText
+  cardno: 1
+  value: 1
+  library: two

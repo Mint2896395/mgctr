@@ -1,0 +1,55 @@
+<div class="modal custom2 fade" id="cardlistModal" tabindex="-1" role="dialog" aria-labelledby="cardlistModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Select card</h5>
+        <button type="button" data-number="2" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align: center">
+        <h4>Major Arcana</h4>
+        <% @deck[0..21].each do |card| %>
+        <a id="<%= card[:id] %>" href="javascript:void(0)" onclick="choosecard(<%= card[:id] %>, '<%= card[:name] %>')"><%= card[:name] %></a> |
+        <% end %>  
+        <h4>Wands</h4>
+        <% @deck[22..35].each do |card| %>
+        <a id="<%= card[:id] %>" href="javascript:void(0)" onclick="choosecard(<%= card[:id] %>, '<%= card[:name] %>')"><%= card[:name] %></a> |
+        <% end %>  
+        <h4>Cups</h4>
+        <% @deck[36..49].each do |card| %>
+        <a id="<%= card[:id] %>" href="javascript:void(0)" onclick="choosecard(<%= card[:id] %>, '<%= card[:name] %>')"><%= card[:name] %></a> |
+        <% end %>  
+        <h4>Swords</h4>
+        <% @deck[50..63].each do |card| %>
+        <a id="<%= card[:id] %>" href="javascript:void(0)" onclick="choosecard(<%= card[:id] %>, '<%= card[:name] %>')"><%= card[:name] %></a> |
+        <% end %>  
+        <h4>Coins</h4>
+        <% @deck[64..-1].each do |card| %>
+        <a id="<%= card[:id] %>" href="javascript:void(0)" onclick="choosecard(<%= card[:id] %>, '<%= card[:name] %>')"><%= card[:name] %></a> |
+        <% end %>  
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function choosecard(ev1 , ev2) { 
+   
+    document.getElementById("cardlibrary_cardid").value = ev1;
+    document.getElementById("cardlibrary_name").value = ev2;
+    hideModal()
+
+}
+
+function hideModal() {
+  $("#cardlistModal").removeClass("in");
+  $(".modal-backdrop").remove();
+  $('body').removeClass('modal-open');
+  $('body').css('padding-right', '');
+  $("#cardlistModal").hide();
+}
+</script>
+
+

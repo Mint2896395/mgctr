@@ -111,7 +111,7 @@ function populateModal(cardDB, id, target) {
     $('<li><i class="fa fa-circle"></i>'+value+'</li>').appendTo(target+' .modal-keywords');
   });
   // Populate image
-  $(target+' .modal-image').attr('src','./img/small/'+cardDB[id].img);
+  $(target+' .modal-image').attr('src','/img/small/'+cardDB[id].img);
   // Populate descriptions
   // Archetype
   if (cardDB[id].description.Archetype) {

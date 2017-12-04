@@ -1,0 +1,84 @@
+<div class="band">
+<% @setting = Setting.first %>
+  <% @name = @setting.setting01 %>
+  <% @cardlibrary.where(library_id: @library.id).each do |card| %>
+    <% if @setting.setting02 == "true" %>
+      <a href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:cardid] %>">
+      <div id="<%= card[:cardid] %>" class="card mx-auto">
+      <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %>">
+      
+      <div class="card-block">
+        <h4 class="card-title"><%= card[:name] %></h4>
+        <br><%= card[:description] %>
+        <br><b><u>Value:</u></b><%= card[:value] %>
+        
+      </div>
+    </div>
+      </a>
+      <br><div style="position:absolute; width: 60px;">
+        <%= link_to 'Edit', edit_cardlibrary_path(card.id) %>
+        <%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <%= render "tarot/compareAllmodal" %>
+    <% else %>
+      <a href="#compareModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare_x(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:cardid] %>">
+      <div id="<%= card[:cardid] %>" class="card mx-auto">
+      <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %>">
+      
+      <div class="card-block">
+        <h4 class="card-title"><%= card[:name] %></h4>
+        <br><b><u>Upright:</u></b><br><%= card[:description] %>
+        <br><b><u>Reversed:</u></b><br><%= card[:value] %>
+      </div>
+    </div>
+      </a>
+      <%= render "tarot/comparemodal" %>
+    <% end %>
+     
+  <% end %>  
+</div>
+
+<script>
+function compare(abc) {
+     x = abc
+    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
+    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
+    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
+    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
+    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
+    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
+    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
+    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
+
+    document.getElementById("comparecard1").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard2").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard3").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard4").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard5").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard6").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard7").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard8").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard9").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard10").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard11").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard12").setAttribute('data-card-id', abc);
+}
+   function compare_x(abc) {
+     x = abc
+    document.getElementById("comparecard_x_1").src = "/images03/mycard" + abc + ".jpg";
+    document.getElementById("comparecard_x_2").src = "/images05/mycard" + abc + ".jpg";
+    document.getElementById("comparecard_x_3").src = "/images04/mycard" + abc + ".jpg";
+    document.getElementById("comparecard_x_4").src = "/images02/mycard" + abc + ".jpg";
+    document.getElementById("comparecard_x_5").src = "/images01/mycard" + abc + ".jpg";
+
+    document.getElementById("comparecard_x_1").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard_x_2").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard_x_3").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard_x_4").setAttribute('data-card-id', abc);
+    document.getElementById("comparecard_x_5").setAttribute('data-card-id', abc);
+}
+</script>

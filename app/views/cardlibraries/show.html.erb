@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cardid:</strong>
+  <%= @cardlibrary.cardid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cardlibrary.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cardlibrary.description %>
+</p>
+
+<p>
+  <strong>Cardno:</strong>
+  <%= @cardlibrary.cardno %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @cardlibrary.value %>
+</p>
+
+<p>
+  <strong>Library:</strong>
+  <%= @cardlibrary.library.name %>
+</p>
+
+<%= link_to 'Edit', edit_cardlibrary_path(@cardlibrary) %> |
+<%= link_to 'Back', cardlibraries_path %>
