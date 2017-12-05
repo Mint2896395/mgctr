@@ -8,7 +8,7 @@
                 </li>
                 <li><%= link_to '<i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new'.html_safe, new_library_path %></li>
                 <br>
-                <% @libraries.each do |library| %>
+                <% @libraries.order(:id).each do |library| %>
                 <li> 
                     <%= link_to library do %>
                       <p11><%= library.name %></p11>

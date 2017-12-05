@@ -26,9 +26,11 @@
       <div class="card-block">
         <h4 class="card-title"><%= card[:name] %></h4>
         <br>
+        <% if card[:description] != nil %>
         <p11>
         <%= simple_format(strip_tags(card[:description]))  %>
         </p11>
+        <% end %>
         <% if card[:value] != nil %>
           <br><b><u>Value:</u></b><%= card[:value] %>
         <% end %>
