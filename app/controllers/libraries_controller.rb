@@ -92,7 +92,7 @@ class LibrariesController < ApplicationController
   def show
     @libraries = Library.all
     @cardlibraryx = Cardlibrary.all  
-    #@cardlibrary = Cardlibrary.find(params[:id]) 
+    @cardlibraryz = Cardlibrary.find(params[:id]) 
     @cardlibrary = Cardlibrary.new 
     @deck = [
   { :id => 0, :name => "The Fool", :image =>  "/mycard0.jpg", :desc => "Immaturity, sincerity, the natural man, a free spirit. One who naturally knows his will and is worry free. A dreamer, careless and disinterested in practical matters. Travel." , :rdesc => "Folly, failure, madness. Hindered travel." },

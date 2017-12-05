@@ -9,8 +9,11 @@
                 <li><%= link_to '<i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new'.html_safe, new_library_path %></li>
                 <br>
                 <% @libraries.each do |library| %>
-                <li>
-                    <p11><%= link_to library.name , library %></p11>
+                <li> 
+                    <%= link_to library do %>
+                      <p11><%= library.name %></p11>
+                      <span style="display: inline;" class="badge badge-pill badge-default"><%= @cardlibraryx.where(library_id: library.id).count %></span>
+                    <% end %>
                 </li>
                 <% end %>
             </ul>
