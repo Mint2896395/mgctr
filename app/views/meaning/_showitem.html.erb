@@ -1,0 +1,52 @@
+<p11 id="notice"><%= notice %></p11>
+<% @setting = Setting.last %>
+  <% @libraryid = @setting.setting05 %>
+<div id= "libraryid"><% @library = Library.limit(@libraryid).last %></div>
+<h1>
+  <%= @library.name %>
+</h1>
+
+<h2>
+  <%= @library.description %>
+</h2>
+
+<p11>
+  <%= @library.type %>
+</p11>
+
+<div class="band">
+<% @setting = Setting.first %>
+  <% @name = @setting.setting01 %>
+  <% @cardlibraryx.where(library_id: @library.id).each do |card| %>
+      <div id="<%= card[:cardid] %>" class="card mx-auto">
+      <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %> href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:cardid] %>"">
+      
+      <div class="card-block">
+        <h4 class="card-title"><%= card[:name] %></h4>
+        <p11><br><%= card[:description] %></p11>
+        <% if card[:value] != nil %>
+          <br><b><u>Value:</u></b><%= card[:value] %>
+        <% end %>
+      </div>
+         <br><div style="position:absolute; width: 100%; bottom: 5px; ">
+        <%#= link_to 'Edit', edit_cardlibrary_path(:id => card.id ),
+                               {'data-toggle' => 'modal', 
+                                'data-target' => '#editModal'} %>
+        <%#= link_to 'Edit', edit_cardlibrary_path(:id => card.id ), target: :_blank %>
+
+        <%#= link_to "Edit", "#editModal", "data-toggle" => "modal", :id => card.id %>
+        <%#= link_to 'X', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+      <%= render "tarot/compareAllmodal" %>
+     
+  <% end %>  
+</div>
+
+<script>
+function libraryid() {
+     var url = '<% @library = Library.limit(2).last %>';
+    document.getElementById("libraryid").innerHTML = url;
+}
+</script>
+

@@ -1,126 +1,32 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%= @library.name %>
-</p>
+<div id="wrapper" class="toggled">
 
-<p>
-  <strong>Description:</strong>
-  <%= @library.description %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @library.type %>
-</p>
-
-<%= link_to 'Edit', edit_library_path(@library) %> |
-<%= link_to 'Back', libraries_path %>
-<br>
-
-<%= link_to "ADD NEW CARD", "#editModal", :class => "btn btn-primary btn-lg btn-block", "data-toggle" => "modal" %>
-<%= render "cardlibraries/editmodal" %>
-<%= render "cardlibraries/cardlist" %>
-<br>
-<div class="band">
-<% @setting = Setting.first %>
-  <% @name = @setting.setting01 %>
-  <% @cardlibraryx.where(library_id: @library.id).each do |card| %>
-    <% if @setting.setting02 == "true" %>
-      <div id="<%= card[:cardid] %>" class="card mx-auto">
-      <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %> href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:cardid] %>"">
-      
-      <div class="card-block">
-        <h4 class="card-title"><%= card[:name] %></h4>
-        <br><%= card[:description] %>
-        <% if card[:value] != nil %>
-          <br><b><u>Value:</u></b><%= card[:value] %>
-        <% end %>
-      </div>
-         <br><div style="position:absolute; width: 100%; bottom: 5px; ">
-        <%#= link_to 'Edit', edit_cardlibrary_path(:id => card.id ),
-                               {'data-toggle' => 'modal', 
-                                'data-target' => '#editModal'} %>
-        <%= link_to 'Edit', edit_cardlibrary_path(:id => card.id ), target: :_blank %>
-
-        <%#= link_to "Edit", "#editModal", "data-toggle" => "modal", :id => card.id %> |
-        <%= link_to 'X', card, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                        <%= link_to 'Mgctr78 Library', libraries_path %>        
+                </li>
+                <li><%= link_to '<i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new'.html_safe, new_library_path %></li>
+                <br>
+                <% @libraries.each do |library| %>
+                <li>
+                    <p11><%= link_to library.name , library %></p11>
+                </li>
+                <% end %>
+            </ul>
         </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div id="showitem"><%= render "libraries/showold" %></div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-      <%= render "tarot/compareAllmodal" %>
-      
-    <% else %>
-      <a href="#compareModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare_x(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareModal" data-card-id="<%= card[:cardid] %>">
-      <div id="<%= card[:cardid] %>" class="card mx-auto">
-      <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %>">
-      
-      <div class="card-block">
-        <h4 class="card-title"><%= card[:name] %></h4>
-        <br><b><u>Upright:</u></b><br><%= card[:description] %>
-        <br><b><u>Reversed:</u></b><br><%= card[:value] %>
-      </div>
-    </div>
-      </a>
-      <%= render "tarot/comparemodal" %>
-    <% end %>
-     
-  <% end %>  
-</div>
-
-<script>
+    <!-- /#wrapper -->
 
 
-  $('.organon-card-front-new').on('click', function(e) {
-    id = x
-    populateModal(cardDB, id, '#cardModal');
-  });
-
-function compare(abc) {
-     x = abc
-    document.getElementById("comparecard1").src = "/images03/mycard" + abc + ".jpg";
-    document.getElementById("comparecard2").src = "/images05/mycard" + abc + ".jpg";
-    document.getElementById("comparecard3").src = "/images04/mycard" + abc + ".jpg";
-    document.getElementById("comparecard4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard5").src = "/images01/mycard" + abc + ".jpg";
-    document.getElementById("comparecard6").src = "/images06/mycard" + abc + ".jpg";
-    document.getElementById("comparecard7").src = "/images07/mycard" + abc + ".jpg";
-    document.getElementById("comparecard8").src = "/images16/mycard" + abc + ".jpg";
-    document.getElementById("comparecard9").src = "/images12/mycard" + abc + ".jpg";
-    document.getElementById("comparecard10").src = "/images11/mycard" + abc + ".jpg";
-    document.getElementById("comparecard11").src = "/images14/mycard" + abc + ".jpg";
-    document.getElementById("comparecard12").src = "/images15/mycard" + abc + ".jpg";
-
-    document.getElementById("comparecard1").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard2").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard3").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard4").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard5").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard6").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard7").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard8").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard9").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard10").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard11").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard12").setAttribute('data-card-id', abc);
-}
-   function compare_x(abc) {
-     x = abc
-    document.getElementById("comparecard_x_1").src = "/images03/mycard" + abc + ".jpg";
-    document.getElementById("comparecard_x_2").src = "/images05/mycard" + abc + ".jpg";
-    document.getElementById("comparecard_x_3").src = "/images04/mycard" + abc + ".jpg";
-    document.getElementById("comparecard_x_4").src = "/images02/mycard" + abc + ".jpg";
-    document.getElementById("comparecard_x_5").src = "/images01/mycard" + abc + ".jpg";
-
-    document.getElementById("comparecard_x_1").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard_x_2").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard_x_3").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard_x_4").setAttribute('data-card-id', abc);
-    document.getElementById("comparecard_x_5").setAttribute('data-card-id', abc);
-}
-
-$("button[data-number=2]").click(function(){
-    $('#cardlistModal').modal('hide');
-});
-
-</script>
 

@@ -1,5 +1,9 @@
 class MeaningController < ApplicationController
   def index
+    @libraries = Library.all
+    @cardlibraryx = Cardlibrary.all  
+    #@cardlibrary = Cardlibrary.find(params[:id]) 
+    @cardlibrary = Cardlibrary.new 
     @deck = [
 { :id => 0, :name => "The Fool", :image =>  "/mycard0.jpg", :desc => "Immaturity, sincerity, the natural man, a free spirit. One who naturally knows his will and is worry free. A dreamer, careless and disinterested in practical matters. Travel." , :rdesc => "Folly, failure, madness. Hindered travel." },
 { :id => 1, :name => "The Magician", :image =>  "/mycard1.jpg" , :desc => "Will, creativeness, adroitness, mastery, elasticity, autonomy, eloquence, craft, cunning. May imply a new beginning. The Magus is an autonomous person that knows where he is going and how to achieve its ends." , :rdesc => "Indecision, weak will, ineptitude, dilettante. Deceitfulness, trickery." },
