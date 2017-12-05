@@ -87,6 +87,7 @@ class LibrariesController < ApplicationController
   ]
   end
 
+
   # GET /libraries/1
   # GET /libraries/1.json
   def show

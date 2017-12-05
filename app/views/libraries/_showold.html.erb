@@ -4,7 +4,7 @@
 </h1>
 
 <h2>
-  <%= @library.description %>
+  <%= simple_format(strip_tags(@library.description))  %>
 </h2>
 
 <p11>
@@ -26,7 +26,9 @@
       <div class="card-block">
         <h4 class="card-title"><%= card[:name] %></h4>
         <br>
-        <p11><%= card[:description] %></p11>
+        <p11>
+        <%= simple_format(strip_tags(card[:description]))  %>
+        </p11>
         <% if card[:value] != nil %>
           <br><b><u>Value:</u></b><%= card[:value] %>
         <% end %>

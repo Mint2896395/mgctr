@@ -32,3 +32,4 @@
 //= require highcharts
 //= require chartkick
 //= require_tree .
+

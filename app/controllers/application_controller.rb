@@ -3,3 +3,5 @@ class ApplicationController < ActionController::Base
   #before_action :authenticate_user!, except: [:index, :home]
   before_action :authenticate_user!, except: [:cards]
 end
+
+
