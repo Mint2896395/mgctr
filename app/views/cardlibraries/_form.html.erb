@@ -7,10 +7,14 @@
     <a href="#" data-toggle="modal" data-target="#cardlistModal"><i class="fa fa-university"></i>Select card here!!</a>
     <%= f.input :cardid %>
     <%= f.input :name %>
-    <%= f.input :description %>
+    <%= f.input :description, as: :text %>
     <%= f.input :cardno %>
     <%= f.input :value %>
+    <% if libraryid == 'edit'%>
+    <%= f.association :library %>
+    <% else %>
     <%= f.association :library, selected: libraryid %>
+    <% end %>
   </div>
 
   <div class="form-actions">
