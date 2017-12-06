@@ -11,15 +11,16 @@
   <%= @library.type %>
 </p11>
 <span style="float: right;">
-<%= link_to 'Edit', edit_library_path(@library) %> |
+<%= link_to 'Edit', "#editlibModal", "data-toggle" => "modal" %> |
 <%= link_to '<i class="fa fa-plus-square-o" aria-hidden="true"></i> Add card'.html_safe, "#editModal", "data-toggle" => "modal" %></span>
+<%= render "libraries/editlibmodal" %>
 <%= render "cardlibraries/editmodal" %>
 <%= render "cardlibraries/cardlist" %>
 <br>
 <div class="band">
 <% @setting = Setting.first %>
   <% @name = @setting.setting01 %>
-  <% @cardlibraryx.where(library_id: @library.id).each do |card| %>
+  <% @cardlibraryx.where(library_id: @library.id).order(:id).each do |card| %>
       <div id="<%= card[:cardid] %>" class="card mx-auto">
       <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %> href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:cardid] %>"">
       <div style="width: 100%; bottom: 5px; ">

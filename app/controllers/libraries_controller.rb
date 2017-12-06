@@ -91,6 +91,7 @@ class LibrariesController < ApplicationController
   # GET /libraries/1
   # GET /libraries/1.json
   def show
+    @librarynew = Library.new
     @libraries = Library.all
     @cardlibraryx = Cardlibrary.all  
     @cardlibraryz = Cardlibrary.find(params[:id]) 
