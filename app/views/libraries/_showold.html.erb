@@ -22,30 +22,25 @@
   <% @cardlibraryx.where(library_id: @library.id).each do |card| %>
       <div id="<%= card[:cardid] %>" class="card mx-auto">
       <img id="image" class="organon-card-front card-img-top img-fluid" src="/<%= @name %>/mycard<%=card[:cardid]%>.jpg" alt="" data-card-id="<%= card[:cardid] %> href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:cardid] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:cardid] %>"">
-      
-      <div class="card-block">
-        <h4 class="card-title"><%= card[:name] %></h4>
-        <br>
-        <% if card[:description] != nil %>
-        <p11>
-        <%= simple_format(strip_tags(card[:description]))  %>
-        </p11>
-        <% end %>
-        <% if card[:value] != nil %>
-          <br><b><u>Value:</u></b><%= card[:value] %>
-        <% end %>
-      </div>
-         <br><div style="position:absolute; width: 100%; bottom: 5px; ">
-        <%#= link_to 'Edit', edit_cardlibrary_path(:id => card.id ),
-                               {'data-toggle' => 'modal', 
-                                'data-target' => '#editModal'} %>
+      <div style="bottom: 5px; ">
         <span style="float: right; padding-right: 10px; font-size: 12px;">
-        <%= link_to 'Edit', edit_cardlibrary_path(:id => card.id ), target: :_blank %>
-
-        <%#= link_to "Edit", "#editModal", "data-toggle" => "modal", :id => card.id %> |
+        <%= link_to 'Edit', edit_cardlibrary_path(:id => card.id ), target: :_blank %> |
         <%= link_to 'X', card, method: :delete, data: { confirm: 'Are you sure?' } %>
         </span>
         </div>
+      <% if card[:description] != "" %>
+      <div class="card-block" >
+        <h4 class="card-title"><%= card[:name] %></h4>
+        <br>
+        <p11>
+        <%= simple_format(strip_tags(card[:description]))  %>
+        </p11>
+        <% if card[:value] != nil %>
+          <br><b><u>Value:</u></b><%= card[:value] %>
+        <% end %>
+      <% end %>
+         
+      </div>
     </div>
       <%= render "tarot/compareAllmodal" %>
      

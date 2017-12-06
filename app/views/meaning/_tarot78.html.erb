@@ -7,7 +7,7 @@
       <a href="#compareAllModal" style="text-decoration: none;" class="organon-card-front" onclick= "compare(<%= card[:id] %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card[:id] %>">
       <div id="<%= card[:id] %>" class="card mx-auto">
       <img id="image" class="organon-card-front card-img-top img-fluid" src= <%= @name %><%= card[:image] %> alt="" data-card-id="<%= card[:id] %>">
-      
+      <br>
       <div class="card-block">
         <h4 class="card-title"><%= card[:name] %></h4>
         <br><b><u>Upright:</u></b><br><%= card[:desc] %>
