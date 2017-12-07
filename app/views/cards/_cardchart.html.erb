@@ -28,7 +28,7 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
   width: 100%;
   overflow-x: scroll;
   white-space: nowrap;">
-<div id="container" style="position:relative; z-index: 555; max-width: 100%; height: 35vh; left:0 margin: 0 auto; ">
+<div id="container" style="position:relative; z-index: 555; max-width: 100%; height: 35vh; left:0; margin: 0 auto; ">
   
   <% b = @cards1.maximum(:price).to_f %>
   <% a = @cards1.minimum(:price).to_f %>
@@ -40,15 +40,19 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
     <% k = @cardsc.count %>
     <% kpx = (82 * @cardsc.count).to_s + "px" %>
     <% if @cards1.last.price == nil %>
-    <% k = @cardsc2.count - 1 %>
-    <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
+      <% if notfirstpage2 == "all" %>
+        <% k = 20000 %>
+      <% else %>
+        <% k = @cardsc2.count - 1 %>
+        <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
+      <% end %>
     <% end %>
   <% else %>
     <% k = 20 %>
     <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
     <% if @cardsc2.last.price == nil %>
-    <% k = @cardsc2.count - 1 %>
-    <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
+      <% k = @cardsc2.count - 1 %>
+      <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
     <% end %>
   <% end %>
 

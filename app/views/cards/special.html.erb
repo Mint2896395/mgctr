@@ -1,7 +1,5 @@
-<%= link_to card2_path do %>
-  <h2 style="float: left;">Cards Special</h2>
-<% end %>
 <%= render "cards/headerspecial" %>
+
 <% notfirstpagex = (request.original_url.split('/').last) %>
 <% indipage = request.fullpath.split(/\W+/)[2] %>
 <% if  indipage == "page" || notfirstpagex == "card2" %>

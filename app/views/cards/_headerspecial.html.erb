@@ -1,23 +1,30 @@
-<%= link_to 'New Card', '/8' , {:style=>'float: right; position: relative; right: 10px; top: 7px;', :class => "btn btn-secondary"}%>
 <% notfirstpage = (request.fullpath.split('=').last) %>
 <% notfirstpage2 = (request.original_url.split('/').last) %>
-<% if notfirstpage != "1"  %>
-<p style="float: right; position: relative; top: 15px; right: 30px;"><a href=""
+<% notfirst1 = (request.fullpath.split(/\W+/)[-2]) %>
+<% notfirst2 = (request.fullpath.split(/\W+/)[2]) %>
+<% notfirst3 = (request.fullpath.split(/\W+/)[-4]) %>
+
+<div id="wrapper1" style="text-align: center; padding: 20px 10px 0px 10px;">  
+  <%= link_to card2_path do %>
+    <h2 style="float: left; ">Cards Special</h2>
+  <% end %>
+  <%= link_to 'New Card', '/8' , {:style=>'float: right; position: relative; right: 10px;', :class => "btn btn-secondary"}%>  
+  <p style="float: right; position: relative; top: 7px; right: 30px;"><a href=""
     onclick="
     <% @cards.limit(20).each do |card| %> 
-    window.open('<%= edit_card_path(card) %>');        
+      window.open('<%= edit_card_path(card) %>');        
     <% end %>
     ">Edit all</a></p>
-<% end %>
 
-<div id="wrapper1" style="text-align: center; padding-top:0.5%;">    
     <%#= link_to("All ", card2_path(all: 1)) %>
     <% if notfirstpage != "1"  %>
-    <a href="<%= request.original_url + "?all=1" %>">All</a>
+      <a href="<%= request.original_url + "?all=1" %>">All</a>
       <div style="display: inline-block;  "><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
     <% end %>
-    <% notfirstpage1 = notfirstpage2.split('=').first %>
-    <% if notfirstpage1 != "card2?person_id"   %>
+
+    <% if notfirst1 == "person_id" || notfirst2 == "person_id" || notfirst3 == "person_id"  %>
+
+    <% else %>
       <div style="display: inline-block; ">
         <%= simple_form_for Setting.last, :method => :put, validate: true do |f| %>
         <span>Max Y-axis: </span><%= f.select :setting03, [['All', ""], 
@@ -38,17 +45,21 @@
 </div>
 
 
-<div style="margin-top: 20px;">
-<% @cards.limit(1).each do |card| %>
+ <% @cards.limit(1).each do |card| %>
     <span class="noselect" style="display: block;
     <% if notfirstpage == "1"  %>
-    margin-top: 20px;
+      margin-top: 55px;
     <% end %>
     float: left; height: 31vh;
     text-align: center;
     background-color: #d3d3d320;
     width: 97.75%; position: absolute; font-size: 150px; color:#47474730;"><%= card.person.name %></span> 
 <% end %>
-<%= render "cards/cardchart" %>
-</div>
+<% if notfirstpage == "1"  %>
+      <div style="margin-top:60px;">
+      </div>
+
+    <% end %>
+  <%= render "cards/cardchart" %>
 <br>
+
