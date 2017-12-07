@@ -1,3 +1,108 @@
+<!--
+<table>
+  <% @cardsx.each do |card| %>
+  <tr>
+    <img id= <%= card.card01 %> class="organon-card-front" style="magin-right:10px; z-index:4" 
+    src="
+    <% if card.card01 == ""  %>
+    <% imageabc01 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc01 = @name + "/mycard" + card.card01 + ".jpg" %>
+    <% end %>
+    <%= imageabc01 %>"
+    alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card01 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card01 %>">
+  </tr>
+  <tr>
+    <img id= <%= card.card02 %> class="organon-card-front" style="magin-right:10px; z-index:4" 
+    src="
+    <% if card.card02 == ""  %>
+    <% imageabc02 = "imagesxx/Empty.png" %> 
+    <% else %>
+    <% imageabc02 = @name + "/mycard" + card.card02 + ".jpg" %>
+    <% end %>
+    <%= imageabc02 %>"
+     alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card02 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card02 %>">
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+
+<table>
+  <% abclimit = 0 %>
+  <% @cards.drop(abclimit).each_with_index do |card1, index| %>
+    <% break if index == abclimit + 1 %>
+    <% if index < abclimit %>
+      <tr>
+        <img id= <%= card1.card03 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+        src="
+        <% if card1.card03 == "" || index <= abclimit %>
+        <% imageabc03 = "imagesxx/Empty.png" %> 
+        <% else %>
+        <% imageabc03 = @name + "/mycard" + card1.card03 + ".jpg" %>
+        <% end %>
+        <%= imageabc03 %>"
+        alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card1.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card1.card03 %>">
+      </tr>
+      <tr>
+        <img id= <%= card1.card04 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+        
+        <% if card1.card04 == "" || index <= abclimit %>
+        <% imageabc04 = "imagesxx/Empty.png" %> 
+        <% else %>
+        <% imageabc04 = @name + "/mycard" + card1.card04 + ".jpg" %>
+        <% end %>
+
+        src="<%= imageabc04 %>"
+        alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card1.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card1.card04 %>">
+      </tr>
+      <tr><span> </span></tr>
+  <% else %>
+      <% @cardsx.each do |card| %>
+        <tr>
+          <img id= <%= card.card03 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+          src="
+          <% if card.card03 == ""  %>
+          <% imageabc03 = "imagesxx/Empty.png" %> 
+          <% else %>
+          <% imageabc03 = @name + "/mycard" + card.card03 + ".jpg" %>
+          <% end %>
+          <%= imageabc03 %>"
+          alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card03 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card03 %>">
+        </tr>
+        <tr>
+          <img id= <%= card.card04 %> class="organon-card-front" style="magin-right:10px; z-index:4; opacity: 0.6;" 
+          src="
+          <% if card.card04 == ""  %>
+          <% imageabc04 = "imagesxx/Empty.png" %> 
+          <% else %>
+          <% imageabc04 = @name + "/mycard" + card.card04 + ".jpg" %>
+          <% end %>
+          <%= imageabc04 %>"
+          alt="" border="1" height="70.4" width="39" onclick= "compare(<%= card.card04 %>);" data-toggle="modal" data-target="#compareAllModal" data-card-id="<%= card.card04 %>">
+        </tr>
+        <tr><span> </span></tr>
+      <% end %>
+    <% end %>
+  <% end %>
+</table>
+<table>
+  <% @cardsx.each do |card| %>
+  <tr>
+   <span style="position:absolute;  z-index:5; background-color: rgba(41, 43, 44, 0.726); font-size: 10.5px"><%= card.date.strftime('%b%d') %>
+    </span>
+
+    <img style="z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr>
+
+    <img style=" z-index:4" src="imagesxx/Empty.png" alt="" border="1" height="5" width="39" >
+  </tr>
+  <tr><span> </span></tr>
+  <% end %>
+</table>
+-->
+
+
 <!-- Start group2 here!!!-->
 
 <div id = "group02">
