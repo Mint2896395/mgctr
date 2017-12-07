@@ -41,7 +41,7 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
     <% kpx = (82 * @cardsc.count).to_s + "px" %>
   <% else %>
     <% k = 20 %>
-    <% kpx = (74.5 * @cardsc2.count).to_s + "px" %>
+    <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
   <% end %>
 
   <% if notfirstpage1 == "person_id" || notfirstpage2 == "person_id" || notfirstpage3 == "person_id" %>
