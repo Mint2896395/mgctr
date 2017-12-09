@@ -53,14 +53,11 @@
 <% if notfirstpage2  == "card2?all=1" || notfirstpage == "Search"  %>
   <%= render "cards/searchbar" %>
 <% else %>
-  <% if notfirstpage == "1"  %>
-    <div style="margin-top:60px;">
-    </div>
-  <% end %>
+ 
   <% @cards.limit(1).each do |card| %>
     <span class="noselect" style="display: block;
     <% if notfirstpage == "1"  %>
-      margin-top: 55px;
+      margin-top: 45px;
     <% end %>
     float: left; height: 31vh;
     text-align: center;
