@@ -70,4 +70,5 @@ gem 'highcharts-rails'
 gem 'groupdate'
 
 
-
+gem 'momentjs-rails'
+gem 'bootstrap-daterangepicker-rails'
