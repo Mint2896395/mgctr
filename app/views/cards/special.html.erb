@@ -1,6 +1,7 @@
 <%= render "cards/headerspecial" %>
 
 <% notfirstpagex = (request.original_url.split('/').last) %>
+<% notsearch = (request.fullpath.split('=').last) %>
 <% indipage = request.fullpath.split(/\W+/)[2] %>
 <% if  indipage == "page" || notfirstpagex == "card2" %>
   <% @cards1 = @cards %>
@@ -35,7 +36,7 @@
   <% @setting = Setting.first %>
   <% @name = @setting.setting01 %>
   <% pagenum = request.fullpath.split(/\W+/).last %>
-  <% if pagenum == "1"  %>
+  <% if pagenum == "1" || notsearch == "Search" %>
   <% @cards = @cards1 %>
   <% end %>
     <% @cards.each_with_index do |card, index| %>

@@ -1,0 +1,28 @@
+
+<div class="form-inline">
+  <%= form_tag(card2_path, :method => "get", id: "search-form", :html => {class: "form"}) do %>
+  <div class="form-group" style="padding-left: 20vw;">
+    <a href="#" data-toggle="modal" data-target="#cardlistModal" ><i class="fa fa-university"></i>Select card here!!</a>
+    <%= text_field_tag :q, params[:q], placeholder: "Card1 or Card2 id", class: "form-control", id: 'cardlibrary_cardid3' %>
+    <%= submit_tag "Search", class: 'btn btn-primary', id: 'btn' %>
+  </div>
+  <% end %>
+</div>
+
+<%= render "cardlibraries/cardlist" %>
+
+<script>
+function choosecard(ev1 , ev2) {   
+    document.getElementById("cardlibrary_cardid3").value = ev1;
+    document.getElementById('btn').click(); 
+    hideModal()
+}
+
+function hideModal() {
+  $("#cardlistModal").removeClass("in");
+  $(".modal-backdrop").remove();
+  $('body').removeClass('modal-open');
+  $('body').css('padding-right', '');
+  $("#cardlistModal").hide();
+}
+</script>

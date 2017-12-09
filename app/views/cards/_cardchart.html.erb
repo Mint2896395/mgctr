@@ -34,6 +34,8 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
   <% a = @cards1.minimum(:price).to_f %>
   <% c = Setting.last.setting03  %>
 
+
+<% if notfirstpagex != "Search"  %>
   <% if notfirstpagex == "1"  %>
     <% @cardsc = @cardsc %>
     <% @cards = @cards1 %>
@@ -55,6 +57,7 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
       <% kpx = (82* @cardsc2.limit(k).count).to_s + "px" %>
     <% end %>
   <% end %>
+<% end %>
 
   <% if notfirstpage1 == "person_id" || notfirstpage2 == "person_id" || notfirstpage3 == "person_id" %>
     

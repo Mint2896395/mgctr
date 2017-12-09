@@ -95,7 +95,8 @@ class CardsController < ApplicationController
   end
 
   def special
-     
+
+
     if params[:person_id]
       @person = Person.find(params[:person_id])
       @cards = @person.cards.order(:id).page params[:page]
@@ -111,6 +112,13 @@ class CardsController < ApplicationController
       @cardsc_x = Card.all.order(:person_id).page params[:page]
       @cards1 = Card.all.order(:id) 
       @cards2 = Card.all.order(:id) 
+      if params[:q]
+        #@cards1 = Card.where("card01 ILIKE ? OR card02 ILIKE ?", "%#{params[:q]}%", "%#{params[:q]}%").all.order('LOWER(name)')
+        @cards1 = Card.where("card01 ILIKE ? OR card02 ILIKE ?", "#{params[:q]}", "#{params[:q]}").all.order('LOWER(name)')
+      else
+        @cards1 = Card.all.order(:id) 
+      end
+   
       
       if params[:all]
         @cards = @cards.per(Card.count)

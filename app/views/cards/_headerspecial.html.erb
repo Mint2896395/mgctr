@@ -1,5 +1,5 @@
 <% notfirstpage = (request.fullpath.split('=').last) %>
-<% notfirstpage2 = (request.original_url.split('/').last) %>
+<% notfirstpage2 = (request.fullpath.split('/').last) %>
 <% notfirst1 = (request.fullpath.split(/\W+/)[-2]) %>
 <% notfirst2 = (request.fullpath.split(/\W+/)[2]) %>
 <% notfirst3 = (request.fullpath.split(/\W+/)[-4]) %>
@@ -8,6 +8,7 @@
   <%= link_to card2_path do %>
     <h2 style="float: left; ">Cards Special</h2>
   <% end %>
+  
   <%= link_to 'New Card', '/8' , {:style=>'float: right; position: relative; right: 10px;', :class => "btn btn-secondary"}%>  
   <p style="float: right; position: relative; top: 7px; right: 30px;"><a href=""
     onclick="
@@ -17,35 +18,46 @@
     ">Edit all</a></p>
 
     <%#= link_to("All ", card2_path(all: 1)) %>
-    <% if notfirstpage != "1"  %>
-      <a href="<%= request.original_url + "?all=1" %>">All</a>
-      <div style="display: inline-block;  "><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
+    <% if notfirstpage != "1"%>
+      <% if notfirstpage != "Search"%>
+        <a href="<%= request.original_url + "?all=1" %>">All</a>
+        <div style="display: inline-block;  "><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
+      <% end %>
     <% end %>
 
     <% if notfirst1 == "person_id" || notfirst2 == "person_id" || notfirst3 == "person_id"  %>
 
     <% else %>
-      <div style="display: inline-block; ">
-        <%= simple_form_for Setting.last, :method => :put, validate: true do |f| %>
-        <span>Max Y-axis: </span><%= f.select :setting03, [['All', ""], 
-                          ['80', "80"], 
-                          ['40', "40"], 
-                          ['20', "20"], 
-                          ['10', "10"], 
-                          ['5', "5"], 
-                          ['1', "1"], 
-                          ['0.50', "0.50"], 
-                          ['0.25', "0.25"], 
-                          ['0.1', "0.1"], 
-                          ['0.05', "0.05"]
-                          ], {}, { :onchange => 'this.form.submit()'} %>
-        <% end %>
-      </div>
+      <% if notfirstpage2  == "card2?all=1" || notfirstpage == "Search"  %>
+      <% else %>
+        <div style="display: inline-block; ">
+          <%= simple_form_for Setting.last, :method => :put, validate: true do |f| %>
+          <span>Max Y-axis: </span><%= f.select :setting03, [['All', ""], 
+                            ['80', "80"], 
+                            ['40', "40"], 
+                            ['20', "20"], 
+                            ['10', "10"], 
+                            ['5', "5"], 
+                            ['1', "1"], 
+                            ['0.50', "0.50"], 
+                            ['0.25', "0.25"], 
+                            ['0.1', "0.1"], 
+                            ['0.05', "0.05"]
+                            ], {}, { :onchange => 'this.form.submit()'} %>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
 </div>
 
-
- <% @cards.limit(1).each do |card| %>
+<% if notfirstpage2  == "card2?all=1" || notfirstpage == "Search"  %>
+  <%= render "cards/searchbar" %>
+<% else %>
+  <% if notfirstpage == "1"  %>
+    <div style="margin-top:60px;">
+    </div>
+  <% end %>
+  <% @cards.limit(1).each do |card| %>
     <span class="noselect" style="display: block;
     <% if notfirstpage == "1"  %>
       margin-top: 55px;
@@ -54,11 +66,11 @@
     text-align: center;
     background-color: #d3d3d320;
     width: 97.75%; position: absolute; font-size: 150px; color:#47474730;"><%= card.person.name %></span> 
-<% end %>
-<% if notfirstpage == "1"  %>
-  <div style="margin-top:60px;">
-  </div>
-<% end %>
+  <% end %>
+
   <%= render "cards/cardchart" %>
+
+<% end %>
+
 <br>
 
