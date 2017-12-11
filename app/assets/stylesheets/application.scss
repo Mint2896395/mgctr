@@ -439,6 +439,22 @@ a {
   padding-top: 0px; 
 }
 
+.modal.custom3 .modal-dialog {
+  max-width: 40vw !important;
+  margin: 20px;
+  top: 5%;
+  /*add what you want here*/
+}
+
+.modal.custom3 .modal-header,
+.modal.custom3 .modal-body,
+.modal.custom3 .modal-footer {
+  background: transparent;
+  border-radius: 6px;
+  border-bottom: 0px;
+  padding-top: 0px;
+}
+
 .modal-content1 {
   position: relative;
   display: -webkit-box;

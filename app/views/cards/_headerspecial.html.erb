@@ -10,17 +10,21 @@
   <% end %>
   
   <%= link_to 'New Card', '/8' , {:style=>'float: right; position: relative; right: 10px;', :class => "btn btn-secondary"}%>  
-  <p style="float: right; position: relative; top: 7px; right: 30px;"><a href=""
-    onclick="
-    <% @cards.limit(20).each do |card| %> 
-      window.open('<%= edit_card_path(card) %>');        
-    <% end %>
-    ">Edit all</a></p>
+  
 
     <%#= link_to("All ", card2_path(all: 1)) %>
     <% if notfirstpage != "1"%>
       <% if notfirstpage != "Search"%>
-        <a href="<%= request.original_url + "?all=1" %>">All</a>
+        <p style="float: right; position: relative; top: 7px; right: 30px;"><a href=""
+          onclick="
+         <% @cards.limit(20).each do |card| %> 
+          window.open('<%= edit_card_path(card) %>');        
+          <% end %>
+          ">Edit all</a>
+        </p>
+        <% if notfirst2 != "page"%>
+          <a href="<%= request.original_url + "?all=1" %>">All</a>
+        <% end %>
         <div style="display: inline-block;  "><%= paginate @cards, left: 1, right: 3 , theme: 'twitter-bootstrap-4' %></div>
       <% end %>
     <% end %>

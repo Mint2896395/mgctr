@@ -118,8 +118,7 @@ class CardsController < ApplicationController
       else
         @cards1 = Card.all.order(:id) 
       end
-   
-      
+    
       if params[:all]
         @cards = @cards.per(Card.count)
         @cardsc = Card.all.order(:person_id)
