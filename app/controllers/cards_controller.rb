@@ -316,8 +316,9 @@ class CardsController < ApplicationController
         b = Setting.find(1)  
         c = b.setting04.to_i + 1
         d = b.setting05.to_i + 1
+        e = Setting.find(2).setting04 
         if c >= d
-          b.setting04 = "1"
+          b.setting04 = e
         elsif
           b.setting04 = c.to_s
         end
