@@ -7,7 +7,7 @@
 <% @card = Card.new %> 
 <%= simple_form_for @card, url: {controller: "cards", action: "create"} do |f| %>
 <br>
-  <%= f.association :person, label: false, selected: @selectedname, input_html: { id: 'selectized_8_'} %>
+  <%= f.association :person, label: false, selected: [@selectedname], input_html: { id: 'selectized_8_'} %>
     <div class= "row">
       <div class= "col-sm-6">
       <%= f.input :price, label: false, placeholder: "Price" %>
