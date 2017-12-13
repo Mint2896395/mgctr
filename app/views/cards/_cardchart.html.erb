@@ -63,7 +63,7 @@ request.fullpath -> "/allreferred?&referred_name=maria" %>
     <%= line_chart @cardsc2.limit(k).order(:date).group(:person_id).group(:date).sum(:price), discrete: true, curve: false, legend: false, min: a-(a/10) , max: b, width: kpx, height: "33vh"  %>
   <% else %>
     <%#= @cards1.where.not(person_id: "1").order(:date) %>
-    <%= line_chart @cardsc.group(:date).order(:date).group(:person_id).sum(:price), discrete: true, curve: false, legend: true, min: 0 , max: c, width: "99%", height: "33vh",legend: "bottom"  %> 
+    <%= line_chart @cardsc.group(:person_id).group(:date).order(:date).sum(:price), discrete: true, curve: false, legend: true, min: 0 , max: c, width: "99%", height: "33vh",legend: "bottom"  %> 
   <% end %>
   
 </div>
