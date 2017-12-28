@@ -1480,14 +1480,16 @@ $spread-height: 700px;
      -webkit-touch-callout:none;
 }
 
-.mgCard:hover {
+.mgCard:hover,
+.mgCard:active {
     transform: translateY(-12px);
 }
 
 .f {
     z-index: 3;
 }
-.f:hover {
+.f:hover,
+.f:active {
     z-index: 99999;
     transform: translateY(-20px);
 }
