@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby "~> 2.7.x"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
@@ -73,3 +74,6 @@ gem 'groupdate'
 
 gem 'momentjs-rails'
 gem 'bootstrap-daterangepicker-rails'
+
+
+gem "cowsay", "~> 0.3.0"
