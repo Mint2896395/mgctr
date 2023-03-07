@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: mgctr78_production
-  username: mgctr78
-  password: <%= ENV['MGCTR78_DATABASE_PASSWORD'] %>
+  #username: mgctr78
+  #password: <%= ENV['MGCTR78_DATABASE_PASSWORD'] %>
